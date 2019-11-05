@@ -1,27 +1,21 @@
-baseURL = "https://example.com/"
-title = "Indigo Theme"
-copyright = "Copyright © 2018, Author Name"
+baseURL = "/"
+title = "lil-bioinf"
+copyright = "Copyright © 2019, Gabriella Morgenshtern & Cait Harrigan"
 languageCode = "en-US"
 theme = "indigo"
 paginate = 3
 
+[social]
+  github = "https://github.com/harrig12/lil-bioinf"
+
 [params]
   Author = "Author Name"
-  Description = "Description of website for head meta tag"
-  Subtitle = "A subtitle for your site"
+  Description = "Workshop - R for Bioinformatics"
+  Subtitle = "An introductory workshop to R for bioinformatics"
   Avatar = "images/site-logo.svg"
   Biography = "A short description, a few sentences describing the author. Set the 'ShowBio' parameter to false to hide this."
-  ShowBio = true
-  PermalinkText = "🔗"
-
-  # Contact/social-network identifiers for social icons
-  EmailAddress = "email.address@example.com"
-  GitHubUser1= "GitHubUserName1"
-  GitHubUser2= "GitHubUserName2"
-  
-  # These are parameters used for indieweb identity. You should set these along
-  # with the above email/social network parameters.
-  [params.indieWeb]
-    EmailAddress = "email.address@example.com"
-    GitHubUser1= "GitHubUserName1"
-    GitHubUser2= "GutHubUserName2"
+  ShowBio = false
+  ShowDatesOnPosts = false
+  ShowDatesOnPages = true
+  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+  GitHubUser = "harrig12/lil-bioinf"

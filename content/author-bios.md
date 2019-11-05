@@ -1,10 +1,4 @@
 ---
-categories:
-- meta
-date: "2018-10-01T08:00:00-04:00"
-draft: false
-tags:
-- options
 title: Author Bios
 ---
 

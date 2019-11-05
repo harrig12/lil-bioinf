@@ -2,7 +2,6 @@
 Title: "R for bioinformatics (and more!)"
 menu: main
 draft: false
-date: false
 ---
 
 Preview text for workshop Rmd

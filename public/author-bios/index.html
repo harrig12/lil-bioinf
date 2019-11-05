@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Adding Page Items | lil-bioinf</title>
+    <title>Author Bios | lil-bioinf</title>
     <meta name="description" content="Workshop - R for Bioinformatics">
     <meta name="author" content="">
     
@@ -65,7 +65,7 @@
 <div id="content">
     <article class="h-entry">
         <header>
-            <h1 class="post-title p-name">Adding Page Items</h1>
+            <h1 class="post-title p-name">Author Bios</h1>
             
             <p class="post-date">Posted on
                 <time class="dt-published" datetime="0001-01-01T00:00:00Z">
@@ -76,13 +76,91 @@
             
         </header>
         <section class="content e-content">
-            <p>Indigo supports adding a simple navigation-style menu items across the top of the site. To do so, simply add a <code>menu: &quot;main&quot;</code> entry in your page&rsquo;s front matter (TOML format shown).</p>
+            <p>The bottom of every page in the theme can optionally show a short biography of the site author, including a profile picture, email link, and location.</p>
 
-<p>If no date is included in the front matter, then the published date won&rsquo;t be shown (as in this page).</p>
+<h2 id="setting-up-the-author-bio">Setting up the author bio</h2>
 
+<p>A set of configuration options are used for displaying the biography.</p>
+
+<pre><code>[params]
+  Author = &quot;Author Name&quot;
+  Avatar = &quot;images/site-logo.svg&quot;
+  Biography = &quot;A short description, a few sentences describing the author. Set
+               the 'ShowBio' parameter to false to hide this.&quot;
+  ShowBio = true        
+
+[params.indieWeb]  
+    EmailAddress = &quot;email.address@example.com&quot;
+    Country = &quot;CountryName&quot;
+    City = &quot;CityName&quot;
+</code></pre>
+
+<p>Specifics on each setting item are as follows:</p>
+
+<ul>
+<li><code>Author</code>: Your name; this is the site author name.</li>
+<li><code>Avatar</code>: The path to your profile picture. By default, it will show the theme&rsquo;s logo (<code>/static/images/site-logo.svg</code>).</li>
+<li><code>Biography</code>: Hopefully the placeholder text here is self-explanatory; add a couple of short sentences about yourself here.</li>
+<li><code>ShowBio</code>: If you prefer not to show the author bio, set this to <code>false</code>. By default, it&rsquo;s set to <code>true</code>.</li>
+<li><code>EmailAddress</code>: The email address at which you can be contacted.</li>
+<li><code>Country</code>: The name of the country in which you live.</li>
+<li><code>City</code>: The name of the city in which you live.</li>
+</ul>
+
+<h2 id="indieweb-features">IndieWeb features</h2>
+
+<p>The following classes are used to mark up the author bio for <a href="https://indieweb.org">IndieWeb</a> parsing:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Element</th>
+<th align="left">Class</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">The author card</td>
+<td align="left"><code>h-card</code></td>
+</tr>
+
+<tr>
+<td align="left">Profile picture</td>
+<td align="left"><code>u-photo</code></td>
+</tr>
+
+<tr>
+<td align="left">Author URL*</td>
+<td align="left"><code>p-name</code>, <code>u-url</code>, <code>rel=me</code></td>
+</tr>
+
+<tr>
+<td align="left">City</td>
+<td align="left"><code>p-locality</code></td>
+</tr>
+
+<tr>
+<td align="left">Country</td>
+<td align="left"><code>p-country-name</code></td>
+</tr>
+
+<tr>
+<td align="left">Email address</td>
+<td align="left"><code>u-email</code></td>
+</tr>
+
+<tr>
+<td align="left">Biography</td>
+<td align="left"><code>p-note</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>*Author URL is set to the site&rsquo;s base URL.</p>
         </section>
         <footer>
-            <a class="permalink u-url" href="/adding-menu-items/"></a>
+            <a class="permalink u-url" href="/author-bios/"></a>
             
         </footer>
     </article>
@@ -94,7 +172,7 @@
       <nav id="article-skip">
         <div class="next">
           
-          <a alt="Newer article" href="/about/">&larr; Newer</a>
+          <a alt="Newer article" href="/adding-menu-items/">&larr; Newer</a>
           
         </div>
         <div class="top">
@@ -102,7 +180,7 @@
         </div>
         <div class="prev">
           
-          <a alt="Older article" href="/author-bios/">Older &rarr;</a>
+          <a alt="Older article" href="/post/workshop/">Older &rarr;</a>
           
         </div>
       </nav>

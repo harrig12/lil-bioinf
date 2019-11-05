@@ -1,9 +1,13 @@
 ---
 Title: "R for bioinformatics (and more!)"
-categories: ["R"]
 menu: main
+draft: false
+date: false
 ---
 
+Preview text for workshop Rmd
+
+<!--more-->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
