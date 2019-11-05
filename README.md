@@ -2,9 +2,9 @@
 
 &nbsp;
 
-## [Gabriela Morgenshtern](https://orcid.org/0000-0003-4762-8797),Department of Cells and System Biology, University of Toronto, Canada. &lt;g.morgenshtern@mail.utoronto.ca&gt;
+#### [Gabriela Morgenshtern](https://orcid.org/0000-0003-4762-8797),Department of Cells and System Biology, University of Toronto, Canada. &lt;g.morgenshtern@mail.utoronto.ca&gt;
 
-## [Cait Harrigan](https://orcid.org/0000-0002-9243-9648), Department of Computer Science, University of Toronto, Canada. &lt;cait.harrigan@mail.utoronto.ca&gt;
+#### [Cait Harrigan](https://orcid.org/0000-0002-9243-9648), Department of Computer Science, University of Toronto, Canada. &lt;cait.harrigan@mail.utoronto.ca&gt;
 
 
 <!-- TOCbelow -->
