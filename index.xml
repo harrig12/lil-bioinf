@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lil-bioinf</title>
-    <link>/</link>
+    <link>https://harrig12.github.io/lil-bioinf/</link>
     <description>Recent content on lil-bioinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2019, Gabriella Morgenshtern &amp; Cait Harrigan</copyright>
     
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://harrig12.github.io/lil-bioinf/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About the workshop</title>
-      <link>/about/</link>
+      <link>https://harrig12.github.io/lil-bioinf/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/about/</guid>
       <description>
 
 
@@ -39,10 +39,10 @@ The workshop was designed by &lt;a href=&#34;&#34;&gt;Gabriella Morgenshtern&lt;
     
     <item>
       <title>Adding Page Items</title>
-      <link>/adding-menu-items/</link>
+      <link>https://harrig12.github.io/lil-bioinf/adding-menu-items/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/adding-menu-items/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/adding-menu-items/</guid>
       <description>&lt;p&gt;Indigo supports adding a simple navigation-style menu items across the top of the site. To do so, simply add a &lt;code&gt;menu: &amp;quot;main&amp;quot;&lt;/code&gt; entry in your page&amp;rsquo;s front matter (TOML format shown).&lt;/p&gt;
 
 &lt;p&gt;If no date is included in the front matter, then the published date won&amp;rsquo;t be shown (as in this page).&lt;/p&gt;
@@ -51,10 +51,10 @@ The workshop was designed by &lt;a href=&#34;&#34;&gt;Gabriella Morgenshtern&lt;
     
     <item>
       <title>Author Bios</title>
-      <link>/author-bios/</link>
+      <link>https://harrig12.github.io/lil-bioinf/author-bios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/author-bios/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/author-bios/</guid>
       <description>&lt;p&gt;The bottom of every page in the theme can optionally show a short biography of the site author, including a profile picture, email link, and location.&lt;/p&gt;
 
 &lt;h2 id=&#34;setting-up-the-author-bio&#34;&gt;Setting up the author bio&lt;/h2&gt;
@@ -141,10 +141,10 @@ The workshop was designed by &lt;a href=&#34;&#34;&gt;Gabriella Morgenshtern&lt;
     
     <item>
       <title>R for bioinformatics (and more!)</title>
-      <link>/post/workshop/</link>
+      <link>https://harrig12.github.io/lil-bioinf/post/workshop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/post/workshop/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/post/workshop/</guid>
       <description>&lt;p&gt;&lt;em&gt;R markdown version of content in R scripts&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;plotting.r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.3. &lt;code&gt;plotting.R&lt;/code&gt;&lt;/h2&gt;
@@ -231,7 +231,7 @@ plot( stringNetwork,
       vertex.label = NA,
       main = &amp;quot;Network from STRING data&amp;quot;
     )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/workshop_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;With these settings, size of a node increases with degree, colour is dictated by
 community membership. We can see that there are several fairly well connected nodes
 with high degree of connectivity to other nodes. These nodes tend to be members of

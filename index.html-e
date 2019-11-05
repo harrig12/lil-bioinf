@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+	<meta name="generator" content="Hugo 0.59.1" />
     <meta charset="utf-8">
     
-    <title>About the workshop | lil-bioinf</title>
+    <title>lil-bioinf | lil-bioinf</title>
     <meta name="description" content="Workshop - R for Bioinformatics">
     <meta name="author" content="">
     
@@ -57,64 +59,64 @@
     </div>
 </nav>
         
+        <div id="site-header">
+            <h1>lil-bioinf</h1>
+            
+            <p>
+              An introductory workshop to R for bioinformatics
+            </p>
+            
+        </div>
+        
     </header>
 
 
 
-
 <div id="content">
-    <article class="h-entry">
-        <header>
-            <h1 class="post-title p-name">About the workshop</h1>
-            
-            
-        </header>
-        <section class="content e-content">
-            
 
 
-<p>This is a introductory-level R workshop designed to give a brief overview of the R language, and some small bioinformatics tasks that function as stand-alone examples of the skills that a budding bioinformaticist should have in their toolbox.
-The workshop was designed by <a href="">Gabriella Morgenshtern</a> and <a href="">Cait Harrigan</a>, with reference to <a href="http://steipe.biochemistry.utoronto.ca/abc/assets/ABC-units_map.svg">learning units</a> developed by <a href="http://biochemistry.utoronto.ca/person/boris-steipe/">Dr. Boris Steipe</a>. It runs in about 1 hour, although we also deliver a version that includes basics of statistical modelling in R, which runs in 2 hours.</p>
-<p>If you are attending the workshop: please <em>come prepared</em>. Download and install the following required software ahead of time.</p>
-<ul>
-<li><a href="http://cran.utstat.utoronto.ca/">R language</a></li>
-<li><a href="https://rstudio.com/products/rstudio/download/#download">R studio</a></li>
-</ul>
-<p>The workshop is constructed to feature 3 milestones:</p>
-<ol style="list-style-type: decimal">
-<li>Introduction to R skills</li>
-<li>Data cleaning and exploration</li>
-<li>Data visualization and data-driven biological reasoning</li>
-</ol>
-<p>We encourage the practice of <strong>pair programming</strong></p>
-<p>Supporting scripts and other materials can be found on the workshop <a href="https://github.com/harrig12/lil-bioinf">github</a></p>
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="https://harrig12.github.io/lil-bioinf/post/workshop/">R for bioinformatics (and more!)</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="0001-01-01T00:00:00Z">
+            1 January, 0001 at 00:00 UTC
+          </time>
+        </p>
+      </header>
+      <div>
+         Preview text for workshop Rmd
 
-        </section>
-        <footer>
-            <a class="permalink u-url" href="https://harrig12.github.io/lil-bioinf/about/"></a>
-            
-        </footer>
+      </div>
+      
+      <p><a class="read-more" href="https://harrig12.github.io/lil-bioinf/post/workshop/">Read more &rarr;</a></p>
+      
     </article>
+
+<nav>
+    <div id="pagination">
+        <div class="pagination-item-spacer">&nbsp;</div>
+        
+            <div class="pagination-item-spacer">&nbsp;</div>
+        
+        <div class="pagination-item-spacer">
+            Page 1 of 1
+        </div>
+        
+            <div class="pagination-item-spacer">&nbsp;</div>
+        
+        <div class="pagination-item-spacer">&nbsp;</div>
+    </div>
+</nav>
+
 </div>
+
+
 
     
     <div id="footer">
-      
-      <nav id="article-skip">
-        <div class="next">
-          
-          <p>&nbsp;</p>
-          
-        </div>
-        <div class="top">
-          <a alt="Top of page" href="#">Top</a>
-        </div>
-        <div class="prev">
-          
-          <p>&nbsp;</p>
-          
-        </div>
-      </nav>
       
       <aside id="social">
   <div id="social-icons">
