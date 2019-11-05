@@ -1,9 +1,10 @@
-baseURL = "/"
+baseURL = "https://harrig12.github.io/lil-bioinf/"
 title = "lil-bioinf"
 copyright = "Copyright © 2019, Gabriella Morgenshtern & Cait Harrigan"
 languageCode = "en-US"
 theme = "indigo"
 paginate = 3
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [social]
   github = "https://github.com/harrig12/lil-bioinf"
@@ -16,6 +17,5 @@ paginate = 3
   Biography = "A short description, a few sentences describing the author. Set the 'ShowBio' parameter to false to hide this."
   ShowBio = false
   ShowDatesOnPosts = false
-  ShowDatesOnPages = true
-  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+  ShowDatesOnPages = false
   GitHubUser = "harrig12/lil-bioinf"
