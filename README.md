@@ -2,7 +2,7 @@
 
 &nbsp;
 
-#### [Gabriela Morgenshtern](https://orcid.org/0000-0003-4762-8797),Department of Cells and System Biology, University of Toronto, Canada. &lt;g.morgenshtern@mail.utoronto.ca&gt;
+#### [Gabriela Morgenshtern](https://orcid.org/0000-0003-4762-8797), Department of Cells and System Biology, University of Toronto, Canada. &lt;g.morgenshtern@mail.utoronto.ca&gt;
 
 #### [Cait Harrigan](https://orcid.org/0000-0002-9243-9648), Department of Computer Science, University of Toronto, Canada. &lt;cait.harrigan@mail.utoronto.ca&gt;
 
@@ -12,8 +12,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;1.1. Overview <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;1.2. Requirements <br/>
 2. Milestones:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;2.1 Explore STRING data <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;2.2 Ploting <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;2.1 Introduction to R <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;2.2 Explore STRING data <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;2.3 Ploting <br/>
 3. Contributions<br/>
 <!-- TOCabove -->
 
@@ -40,13 +41,15 @@ You will need to download and install on your system:
 
 # 2 Milestones 
 
-## 2.1 Explore STRING data
+## 2.1 Introduction to R
+
+## 2.2 Explore STRING data
 
 **gabby script**
 
-## 2.2 Plotting
+## 2.3 Plotting
 
-**cait script**
+We demonstrate how the network of protein interaction data that we prepare in part 2.2 can be visualized. 
 
 &nbsp;
 
