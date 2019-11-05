@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Indigo Theme</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Indigo Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2018, Author Name</copyright>
+    <lastBuildDate>Mon, 01 Oct 2018 09:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introducing Indigo</title>
+      <link>/post/introducing-indigo/</link>
+      <pubDate>Mon, 01 Oct 2018 09:00:00 -0400</pubDate>
+      
+      <guid>/post/introducing-indigo/</guid>
+      <description>&lt;p&gt;Indigo is a lightweight theme for &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; with &lt;a href=&#34;https://indieweb.org&#34;&gt;IndieWeb&lt;/a&gt; features baked in. It&amp;rsquo;s great for longer-form blogging, placing its focus on distraction-free reading and beautiful typefaces.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Featured Typefaces</title>
+      <link>/post/featured-typefaces/</link>
+      <pubDate>Mon, 01 Oct 2018 08:30:00 -0400</pubDate>
+      
+      <guid>/post/featured-typefaces/</guid>
+      <description>&lt;p&gt;Indigo uses a combination of three beautiful typefaces to render your words.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Author Bios</title>
+      <link>/post/author-bios/</link>
+      <pubDate>Mon, 01 Oct 2018 08:00:00 -0400</pubDate>
+      
+      <guid>/post/author-bios/</guid>
+      <description>&lt;p&gt;The bottom of every page in the theme can optionally show a short biography of the site author, including a profile picture, email link, and location.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+    <item>
+      <title>R for bioinformatics (and more!)</title>
+      <link>/post/ms3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ms3/</guid>
+      <description>R markdown version of content in R scripts
+2.3. plotting.R 2.3.1. Set Up With the STRING data that we downloaded and previewed previously, we will create a network (aka. graph) representing protein interactions, and observe how certain proteins group together in “communities” with shared similarities.
+# load an R package that will be useful for our task if (!require(igraph)) { install.packages(&amp;quot;igraph&amp;quot;) library(igraph) } ## Loading required package: igraph ## ## Attaching package: &amp;#39;igraph&amp;#39; ## The following objects are masked from &amp;#39;package:stats&amp;#39;: ## ## decompose, spectrum ## The following object is masked from &amp;#39;package:base&amp;#39;: ## ## union # load data from STRING database, prepared in getData.</description>
+    </item>
+    
+  </channel>
+</rss>

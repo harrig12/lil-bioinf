@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/indieweb/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/introducing-indigo/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/meta/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/typography/</loc>
+    <lastmod>2018-10-01T09:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/featured-typefaces/</loc>
+    <lastmod>2018-10-01T08:30:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/author-bios/</loc>
+    <lastmod>2018-10-01T08:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/options/</loc>
+    <lastmod>2018-10-01T08:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2015-07-23-r-rmarkdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-markdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/regression/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/adding-menu-items/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/ms3/</loc>
+  </url>
+  
+</urlset>

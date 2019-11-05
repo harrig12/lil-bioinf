@@ -1,0 +1,27 @@
+baseURL = "https://example.com/"
+title = "Indigo Theme"
+copyright = "Copyright © 2018, Author Name"
+languageCode = "en-US"
+theme = "indigo"
+paginate = 3
+
+[params]
+  Author = "Author Name"
+  Description = "Description of website for head meta tag"
+  Subtitle = "A subtitle for your site"
+  Avatar = "images/site-logo.svg"
+  Biography = "A short description, a few sentences describing the author. Set the 'ShowBio' parameter to false to hide this."
+  ShowBio = true
+  PermalinkText = "🔗"
+
+  # Contact/social-network identifiers for social icons
+  EmailAddress = "email.address@example.com"
+  GitHubUser1= "GitHubUserName1"
+  GitHubUser2= "GitHubUserName2"
+  
+  # These are parameters used for indieweb identity. You should set these along
+  # with the above email/social network parameters.
+  [params.indieWeb]
+    EmailAddress = "email.address@example.com"
+    GitHubUser1= "GitHubUserName1"
+    GitHubUser2= "GutHubUserName2"
