@@ -1,6 +1,5 @@
 ---
 draft: false
-menu: main
 title: Adding Page Items
 ---
 
