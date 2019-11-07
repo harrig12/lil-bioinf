@@ -18,22 +18,22 @@
     
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
     
-    <link rel="stylesheet" href=https://harrig12.github.io/lil-bioinf/css/fonts.css />
-    <link rel="stylesheet" href=https://harrig12.github.io/lil-bioinf/css/style.css />
+    <link rel="stylesheet" href=/lil-bioinf/css/fonts.css />
+    <link rel="stylesheet" href=/lil-bioinf/css/style.css />
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div id="sitelogo">
-        <a class="glyph" alt="Home" href="https://harrig12.github.io/lil-bioinf/"><img src=https://harrig12.github.io/lil-bioinf/images/lil-boi.png alt="Site Logo" height="200px" width="64px"></a>
+        <a class="glyph" alt="Home" href="/lil-bioinf/"><img src=/lil-bioinf/images/lil-boi.png alt="Site Logo" height="200px" width="64px"></a>
     </div>
     <header>
         <nav>
     
     <div id="page-nav">
         <div class="page-nav-item">
-            <a href="https://harrig12.github.io/lil-bioinf/">Home</a>
+            <a href="/lil-bioinf/">Home</a>
         </div>
         
             <div class="page-nav-item">
@@ -67,11 +67,96 @@
             
         </header>
         <section class="content e-content">
-            <p><em>R markdown version of content in R scripts</em></p>
-<div id="plotting.r" class="section level2">
-<h2>2.3. <code>plotting.R</code></h2>
-<div id="set-up" class="section level3">
-<h3>2.3.1. Set Up</h3>
+            <div id="contents" class="section level2">
+<h2>Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#r-basics">R basics</a></li>
+<li><a href="#cran-and-bioconductor">CRAN and Bioconductor</a></li>
+</ul></li>
+<li><a href="#databases">Databases</a>
+<ul>
+<li><a href="#getting-data">Getting data</a></li>
+<li><a href="#data-manipulation">Data manipulation</a></li>
+<li><a href="#subsetting">Subsetting</a></li>
+<li><a href="#data-exploration">Data exploration</a></li>
+</ul></li>
+<li><a href="#drawing-data-driven-conclusions">Drawing data-driven conclusions</a>
+<ul>
+<li><a href="#visualization">Visualization</a></li>
+<li><a href="#statistical-testing">Statistical testing</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="introduction" class="section level2">
+<h2>1. Introduction</h2>
+<div id="r-basics" class="section level3">
+<h3>1.1 R basics</h3>
+<div id="rstudio-environment" class="section level4">
+<h4>1.1.1 RStudio environment</h4>
+<ul>
+<li>panes</li>
+<li>projects</li>
+</ul>
+</div>
+<div id="variables" class="section level4">
+<h4>1.1.2 Variables</h4>
+</div>
+<div id="comments" class="section level4">
+<h4>1.1.3 Comments</h4>
+</div>
+<div id="vectors-and-lists" class="section level4">
+<h4>1.1.4 Vectors and Lists</h4>
+</div>
+<div id="data-frames" class="section level4">
+<h4>1.1.5 Data Frames</h4>
+</div>
+<div id="functions" class="section level4">
+<h4>1.1.6 Functions</h4>
+<ul>
+<li><code>?</code> for help</li>
+</ul>
+</div>
+<div id="plotting" class="section level4">
+<h4>1.1.7 Plotting</h4>
+</div>
+<div id="scripts" class="section level4">
+<h4>1.1.8 Scripts</h4>
+</div>
+</div>
+<div id="cran-and-bioconductor" class="section level3">
+<h3>1.2 CRAN and Bioconductor</h3>
+<ul>
+<li>types of packages available</li>
+<li>anova, t-test, etc</li>
+</ul>
+</div>
+</div>
+<div id="databases" class="section level2">
+<h2>2. Databases</h2>
+<div id="getting-data" class="section level3">
+<h3>2.1 Getting data</h3>
+<div id="example-string-database" class="section level4">
+<h4>2.1.1 Example: STRING database</h4>
+</div>
+</div>
+<div id="data-manipulation" class="section level3">
+<h3>2.2 Data manipulation</h3>
+</div>
+<div id="subsetting" class="section level3">
+<h3>2.2.1 Subsetting</h3>
+</div>
+<div id="data-exploration" class="section level3">
+<h3>2.2.2 Data exploration</h3>
+</div>
+</div>
+<div id="drawing-data-driven-conclusions" class="section level2">
+<h2>3. Drawing data-driven conclusions</h2>
+<div id="visualization" class="section level3">
+<h3>3.1 Visualization</h3>
+<div id="set-up" class="section level4">
+<h4>3.1.1 Set Up</h4>
 <p>With the STRING data that we downloaded and previewed previously, we will create a network (aka. graph) representing protein interactions, and observe how certain proteins group together in “communities” with shared similarities.</p>
 <pre class="r"><code># load an R package that will be useful for our task
 if (!require(igraph)) {
@@ -90,8 +175,8 @@ if (!require(igraph)) {
 <pre class="r"><code># load data from STRING database, prepared in getData.R
 load(&quot;./data/preparedData.RData&quot;)</code></pre>
 </div>
-<div id="define-functions" class="section level3">
-<h3>2.3.2 Define functions</h3>
+<div id="define-functions" class="section level4">
+<h4>3.1.2 Define functions</h4>
 <p>We will define a few functions that let us do certain operations on the data.</p>
 <pre class="r"><code>getGraphSize &lt;- function(G){
   # Find the difference in sizes between the largest 
@@ -128,8 +213,8 @@ randGraph &lt;- function(G){
   return(sample_degseq(d, method = &quot;vl&quot;))
 }</code></pre>
 </div>
-<div id="plot-network" class="section level3">
-<h3>2.3.3. Plot network</h3>
+<div id="plot-network" class="section level4">
+<h4>3.1.3 Plot network</h4>
 <p>This sections is modified from Boris Steipe’s <a href="https://github.com/hyginn/ABC-units">FND-MAT-Graphs_and_networks.R</a> Version 1.0</p>
 <p>Create an igraph object from our STRING network, by plotting the network
 according to community membership of each protein (represented as nodes)</p>
@@ -162,10 +247,14 @@ large group of interacting proteins has many interactions. There are two distinc
 large and well connected communities.</p>
 </div>
 </div>
+<div id="statistical-testing" class="section level3">
+<h3>3.2 Statistical testing</h3>
+</div>
+</div>
 
         </section>
         <footer>
-            <a class="permalink u-url" href="https://harrig12.github.io/lil-bioinf/post/workshop/"></a>
+            <a class="permalink u-url" href="/lil-bioinf/post/workshop/"></a>
             
         </footer>
     </article>
@@ -177,7 +266,7 @@ large and well connected communities.</p>
       <nav id="article-skip">
         <div class="next">
           
-          <a alt="Newer article" href="https://harrig12.github.io/lil-bioinf/about/">&larr; Newer</a>
+          <a alt="Newer article" href="/lil-bioinf/about/">&larr; Newer</a>
           
         </div>
         <div class="top">
@@ -185,7 +274,7 @@ large and well connected communities.</p>
         </div>
         <div class="prev">
           
-          <a alt="Older article" href="https://harrig12.github.io/lil-bioinf/dependencies/">Older &rarr;</a>
+          <a alt="Older article" href="/lil-bioinf/dependencies/">Older &rarr;</a>
           
         </div>
       </nav>
@@ -197,7 +286,7 @@ large and well connected communities.</p>
     
     
     <div class="icon-24x24">
-      <a class="glyph" alt="GitHub profile" href="https://github.com/harrig12/lil-bioinf"><img src=https://harrig12.github.io/lil-bioinf/icons/github.svg height="24px" width="24px"></a>
+      <a class="glyph" alt="GitHub profile" href="https://github.com/harrig12/lil-bioinf"><img src=/lil-bioinf/icons/github.svg height="24px" width="24px"></a>
     </div>
     
     

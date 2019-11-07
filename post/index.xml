@@ -2,23 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on lil-bioinf</title>
-    <link>https://harrig12.github.io/lil-bioinf/post/</link>
+    <link>/lil-bioinf/post/</link>
     <description>Recent content in Posts on lil-bioinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2019, Gabriella Morgenshtern &amp; Cait Harrigan</copyright>
     
-	<atom:link href="https://harrig12.github.io/lil-bioinf/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/lil-bioinf/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R for bioinformatics (and more!)</title>
-      <link>https://harrig12.github.io/lil-bioinf/post/workshop/</link>
+      <link>/lil-bioinf/post/workshop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://harrig12.github.io/lil-bioinf/post/workshop/</guid>
+      <guid>/lil-bioinf/post/workshop/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#contents&#34;&gt;Contents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;1. Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#databases&#34;&gt;2. Databases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#drawing-data-driven-conclusions&#34;&gt;3. Drawing data-driven conclusions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
 &lt;p&gt;A gentle introduction, in three parts.&lt;/p&gt;
 </description>
@@ -26,10 +34,10 @@
     
     <item>
       <title>Instructions for installing required software</title>
-      <link>https://harrig12.github.io/lil-bioinf/dependencies/</link>
+      <link>/lil-bioinf/dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://harrig12.github.io/lil-bioinf/dependencies/</guid>
+      <guid>/lil-bioinf/dependencies/</guid>
       <description>
 
 

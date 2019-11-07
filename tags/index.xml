@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on lil-bioinf</title>
-    <link>https://harrig12.github.io/lil-bioinf/tags/</link>
+    <link>/lil-bioinf/tags/</link>
     <description>Recent content in Tags on lil-bioinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2019, Gabriella Morgenshtern &amp; Cait Harrigan</copyright>
     
-	<atom:link href="https://harrig12.github.io/lil-bioinf/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/lil-bioinf/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
