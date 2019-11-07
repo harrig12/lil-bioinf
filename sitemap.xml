@@ -7,6 +7,14 @@
   </url>
   
   <url>
+    <loc>/post/workshop/</loc>
+  </url>
+  
+  <url>
+    <loc>/dependencies/</loc>
+  </url>
+  
+  <url>
     <loc>/adding-menu-items/</loc>
   </url>
   
@@ -24,10 +32,6 @@
   
   <url>
     <loc>/post/</loc>
-  </url>
-  
-  <url>
-    <loc>/post/workshop/</loc>
   </url>
   
   <url>
