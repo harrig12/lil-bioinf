@@ -1,9 +1,8 @@
-baseURL = "https://harrig12.github.io/lil-bioinf/"
+baseURL = "/"
 title = "lil-bioinf"
 copyright = "Copyright © 2019, Gabriella Morgenshtern & Cait Harrigan"
 languageCode = "en-US"
-theme = "indigo"
-paginate = 3
+theme = "indigo" 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [social]
