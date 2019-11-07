@@ -2,6 +2,7 @@
 draft: false
 menu: main
 title: About the workshop
+type: "about"
 weight: 1
 ---
 
@@ -13,7 +14,7 @@ The workshop was designed by [Gabriella Morgenshtern](https://orcid.org/0000-000
 > We provide [instructions](/dependencies) for how to download and install the following required software ahead of time.
 >
 > - [R language](http://cran.utstat.utoronto.ca/)
-> - [R studio](https://rstudio.com/products/rstudio/download/#download)
+> - [RStudio](https://rstudio.com/products/rstudio/download/#download)
 
 ### The workshop is constructed to feature 3 milestones:
 

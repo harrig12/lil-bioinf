@@ -10,5 +10,27 @@ If you are attending the workshop: please *come prepared*. Download and install 
 
 <!--more-->
 
-meme
+Workshop attendees may wish to follow along on thier laptop. This is highly encouraged, and experimenting is one of the best ways to learn. 
+
+We will be introducing the R programming language at a beginner level, under the assumption that you have not coded before. However, we will expect all workshop attendees to have the following two pieces of software downloaded and installed ahead of time. 
+
+- [R language](https://cran.utstat.utoronto.ca/)
+
+- [RStudio](https://rstudio.com/products/rstudio/download/#download)
+
+# Download and installation of [R language](https://cran.utstat.utoronto.ca/)
+
+Following the link above will take you to the download site for the University of Toronto (hosted by the statistics department). There are download instructions for Linux, Mac, and Windows. We recommend getting the most recent version of R.
+
+Mac: The download link will be under "Latest release" and will look like `R-3.6.1.pkg`. Make sure you have XQuartz also installed. Please be patient, as this can take some time if this has not been set up on your machine before. 
+
+Windows: Follow the `install R for the first time` link, and the download link will be at the top of the page, and look like `Download R 3.6.1 for Windows`
+
+# Download and installation of [RStudio](https://rstudio.com/products/rstudio/download/#download)
+
+Please install RStudio for Desktop (Open Source Licence - the free one!). The link above will take you to the right download section. 
+
+Mac: Download the `.dmg` file, and drag this into your `Applications` folder.
+
+Windows: Download and run the `.exe` file, and follow the set-up wizard instructions.
 

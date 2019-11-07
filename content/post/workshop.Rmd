@@ -2,6 +2,10 @@
 title: "R for bioinformatics (and more!)"
 draft: false
 weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 2
 ---
 
 A gentle introduction, in three parts. 
@@ -11,13 +15,64 @@ A gentle introduction, in three parts.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", 
+                      filename = 'render_toc.R')
 ```
 
-*R markdown version of content in R scripts*
+## Contents
 
-## 2.3. `plotting.R`
+```{r toc, echo=FALSE} 
+# toc code from https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/
+render_toc("workshop.Rmd", toc_header_name = "Contents", toc_depth = 2, )
+```
 
-### 2.3.1. Set Up
+
+
+## 1. Introduction
+
+### 1.1 R basics
+
+#### 1.1.1 RStudio environment 
+- panes
+- projects
+
+#### 1.1.2 Variables
+
+#### 1.1.3 Comments
+
+#### 1.1.4 Vectors and Lists
+
+#### 1.1.5 Data Frames
+
+#### 1.1.6 Functions
+- `?` for help
+
+#### 1.1.7 Plotting
+
+#### 1.1.8 Scripts
+
+### 1.2 CRAN and Bioconductor
+- types of packages available
+- anova, t-test, etc
+
+## 2. Databases
+
+### 2.1 Getting data
+
+#### 2.1.1 Example: STRING database
+
+### 2.2 Data manipulation
+
+### 2.2.1 Subsetting
+
+### 2.2.2 Data exploration
+
+
+## 3. Drawing data-driven conclusions
+
+### 3.1 Visualization
+
+#### 3.1.1 Set Up
 
 With the STRING data that we downloaded and previewed previously, we will create a network (aka. graph) representing protein interactions, and observe how certain proteins group together in "communities" with shared similarities.
 
@@ -33,7 +88,7 @@ load("./data/preparedData.RData")
 ```
 
 
-### 2.3.2 Define functions
+#### 3.1.2 Define functions
 We will define a few functions that let us do certain operations on the data.
 
 ```{r}
@@ -75,7 +130,7 @@ randGraph <- function(G){
 
 
 
-### 2.3.3. Plot network
+#### 3.1.3 Plot network
 
 This sections is modified from Boris Steipe's [FND-MAT-Graphs_and_networks.R](https://github.com/hyginn/ABC-units) Version 1.0 
 
@@ -114,3 +169,4 @@ larger communities - this makes sense biologically, we could expect a protein in
 large group of interacting proteins has many interactions. There are two distinctly 
 large and well connected communities.
 
+### 3.2 Statistical testing
