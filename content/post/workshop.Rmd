@@ -1,10 +1,11 @@
 ---
-Title: "R for bioinformatics (and more!)"
-menu: main
+title: "R for bioinformatics (and more!)"
 draft: false
+weight: 1
 ---
 
-Preview text for workshop Rmd
+A gentle introduction, in three parts. 
+
 
 <!--more-->
 
