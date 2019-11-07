@@ -2,22 +2,21 @@
 title: "R for bioinformatics (and more!)"
 draft: false
 weight: 1
+summary: "A gentle introduction in three parts."
 output:
   blogdown::html_page:
     toc: true
     toc_depth: 2
 ---
 
-A gentle introduction, in three parts. 
 
-
-<!--more-->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", 
-                      filename = 'render_toc.R')
+                     filename = 'render_toc.R')
 ```
+
 
 ## Contents
 
@@ -25,7 +24,6 @@ devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8",
 # toc code from https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/
 render_toc("workshop.Rmd", toc_header_name = "Contents", toc_depth = 2, )
 ```
-
 
 
 ## 1. Introduction

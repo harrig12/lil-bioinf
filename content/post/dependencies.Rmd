@@ -3,12 +3,9 @@ title: "Instructions for installing required software"
 menu: main
 draft: false
 weight: 2
+summary: "If you are attending the workshop: please come prepared. Download and install the required software ahead of time."
 url: "dependencies"
 ---
-
-If you are attending the workshop: please *come prepared*. Download and install the required software ahead of time.
-
-<!--more-->
 
 Workshop attendees may wish to follow along on thier laptop. This is highly encouraged, and experimenting is one of the best ways to learn. 
 
