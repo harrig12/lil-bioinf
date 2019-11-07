@@ -12,7 +12,7 @@ body {
 /* Desktop styles */
 @media only screen and (min-width: 860px) {
   div#sitelogo {
-    margin-left: -96px;
+    margin-left: -200px;
     position: fixed;
   }
 }
@@ -90,7 +90,7 @@ body {
 
 #sitelogo {
   margin: 16px auto 0 auto;
-  width: 64px;
+  width: 120px;
 }
 
 .glyph:hover {

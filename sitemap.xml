@@ -3,35 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/about/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/adding-menu-items/</loc>
+    <loc>/adding-menu-items/</loc>
   </url>
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/author-bios/</loc>
+    <loc>/author-bios/</loc>
   </url>
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/post/</loc>
+    <loc>/post/</loc>
   </url>
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/post/workshop/</loc>
+    <loc>/post/workshop/</loc>
   </url>
   
   <url>
-    <loc>https://harrig12.github.io/lil-bioinf/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
