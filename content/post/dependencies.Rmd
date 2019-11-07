@@ -3,10 +3,10 @@ title: "Instructions for installing required software"
 menu: main
 draft: false
 weight: 2
-url: "custom/foo"
+url: "dependencies"
 ---
 
-If you are attending the workshop: please *come prepared*. Download and install the required software ahead of time. It can take up to 45 minutes to install. 
+If you are attending the workshop: please *come prepared*. Download and install the required software ahead of time.
 
 <!--more-->
 
