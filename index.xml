@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lil-bioinf</title>
-    <link>/lil-bioinf/</link>
+    <link>https://harrig12.github.io/lil-bioinf/</link>
     <description>Recent content on lil-bioinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2019, Gabriella Morgenshtern &amp; Cait Harrigan</copyright>
     
-        <atom:link href="/lil-bioinf/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://harrig12.github.io/lil-bioinf/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About the workshop</title>
-      <link>/lil-bioinf/about/</link>
+      <link>https://harrig12.github.io/lil-bioinf/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/about/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/about/</guid>
       <description>
 
 
@@ -23,7 +23,7 @@
 The workshop was designed by &lt;a href=&#34;https://orcid.org/0000-0003-4762-8797&#34;&gt;Gabriella Morgenshtern&lt;/a&gt; and &lt;a href=&#34;https://orcid.org/0000-0002-9243-9648&#34;&gt;Cait Harrigan&lt;/a&gt;, with reference to &lt;a href=&#34;http://steipe.biochemistry.utoronto.ca/abc/assets/ABC-units_map.svg&#34;&gt;learning units&lt;/a&gt; developed by &lt;a href=&#34;http://biochemistry.utoronto.ca/person/boris-steipe/&#34;&gt;Dr. Boris Steipe&lt;/a&gt;. It runs in about 1 hour, although we also deliver a version that includes basics of statistical modelling in R, which runs in 2 hours.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h4 id=&#34;if-you-are-attending-the-workshop-please-come-prepared.&#34;&gt;If you are attending the workshop: &lt;em&gt;please come prepared&lt;/em&gt;.&lt;/h4&gt;
-&lt;p&gt;We provide &lt;a href=&#34;/lil-bioinf/dependencies&#34;&gt;instructions&lt;/a&gt; for how to download and install the following required software ahead of time.&lt;/p&gt;
+&lt;p&gt;We provide &lt;a href=&#34;https://harrig12.github.io/lil-bioinf/dependencies&#34;&gt;instructions&lt;/a&gt; for how to download and install the following required software ahead of time.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://cran.utstat.utoronto.ca/&#34;&gt;R language&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://rstudio.com/products/rstudio/download/#download&#34;&gt;RStudio&lt;/a&gt;&lt;/li&gt;
@@ -44,40 +44,150 @@ The workshop was designed by &lt;a href=&#34;https://orcid.org/0000-0003-4762-87
     
     <item>
       <title>R for bioinformatics (and more!)</title>
-      <link>/lil-bioinf/post/workshop/</link>
+      <link>https://harrig12.github.io/lil-bioinf/post/workshop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/post/workshop/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/post/workshop/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#contents&#34;&gt;Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;1. Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#objects&#34;&gt;Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#numbers&#34;&gt;Numbers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#variables-1&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#after-each-variable-assignment-write-down-what-you-think-youll-see&#34;&gt;After each variable assignment, write down what you think you’ll see,&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#then-print-the-true-value&#34;&gt;then print the true value&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#variables-2&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#numbers-1&#34;&gt;Numbers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-printa-will-show-1&#34;&gt;Prediction: print(a) will show 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#strings-of-characters&#34;&gt;Strings (of characters)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c-is-a-function-that-makes-a-vector&#34;&gt;c() is a function that makes a vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-1&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functions-1&#34;&gt;Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c-is-a-function-and-it-returns-a-vector&#34;&gt;c() is a function, and it returns a vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-use-the-mean-function-to-get-the-average-of-the-vector&#34;&gt;we can use the mean() function to get the average of the vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-even-create-our-own-functions&#34;&gt;we can even create our own functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functions-also-have-documentation-that-is-accessible-by-using-or&#34;&gt;functions also have documentation that is accessible by using ? or&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-help-funciton-help&#34;&gt;the help funciton help()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#more-types-of-objects&#34;&gt;More types of objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-saw-numbers-and-strings&#34;&gt;We saw numbers and strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#booleans&#34;&gt;Booleans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vectors&#34;&gt;Vectors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-2&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#factors-for-categorical-variables&#34;&gt;Factors (for categorical variables)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-3&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lists&#34;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-4&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-5&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-6&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-7&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dataframes&#34;&gt;Dataframes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#very-useful-for-storing-multiple-pieces-of-data-together.&#34;&gt;Very useful for storing multiple pieces of data together.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-want-shell-colour-as-a-categorical-variable&#34;&gt;We want shell colour as a categorical variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-should-we-put-inside-the-as.factor-function-replace-the-string-below.&#34;&gt;What should we put inside the as.factor() function? Replace the string below.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#matrices-are-to-dataframes-as-lists-are-to-vectors.-similar-in-appearance-with&#34;&gt;Matrices are to dataframes as lists are to vectors. Similar in appearance, with&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#some-usage-differences.-a-matrix-can-have-a-matrix-inside-it-in-the-way-that&#34;&gt;some usage differences. A matrix can have a matrix inside it, in the way that&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-list-of-lists-is-possible.&#34;&gt;a list of lists is possible.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cbind-is-for-column-bind-rbind-is-for-row-bind&#34;&gt;cbind is for column bind, rbind is for row bind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#accessing-data-indexing&#34;&gt;accessing data (indexing)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-can-be-accessed-out-of-datastructures-like-lists-vectors-dataframes-matricies&#34;&gt;data can be accessed out of datastructures, like lists, vectors, dataframes, matricies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#single-returns-an-object-of-the-same-type-double-may-returns-an-object-of-a-different-type.&#34;&gt;single [] returns an object of the same type, double [[]] may returns an object of a different type.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-keep-accessing-within-the-return-object&#34;&gt;we can keep accessing within the return object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-also-view-columns-of-the-dataframe-by-name.-can-index-with-or&#34;&gt;We can also view columns of the dataframe by name. Can index with $ or [[]]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#this-takes-a-little-practice-to-get-used-to-smart-indexing-and-subsetting&#34;&gt;This takes a little practice to get used to! Smart indexing and subsetting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#yield-elegant-solutions.&#34;&gt;yield elegant solutions.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plotting-1&#34;&gt;plotting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-operator-lets-us-write-formulas.-this-is-great-for-plotting&#34;&gt;the ~ operator lets us write formulas. This is great for plotting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#and-we-can-add-extra-parameters-for-nice-looking-plots&#34;&gt;and we can add extra parameters for nice looking plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scripts-1&#34;&gt;Scripts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#up-until-now-this-.r-file-is-not-a-useful-script.-you-can-press-run-but-you&#34;&gt;up until now, this .R file is not a useful script. You can press “run”, but you&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#wont-see-anything-happen.-this-isnt-because-nothings-happening-but-rather-the&#34;&gt;won’t see anything happen. This isn’t because nothing’s happening, but rather the&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#results-are-not-being-output-to-somewhere-you-can-see.-to-fix-this-uncomment-the&#34;&gt;results are not being output to somewhere you can see. To fix this, uncomment the&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#next-line-to-save-the-plot-to-an-image-file-and-try-running-it-again.&#34;&gt;next line to save the plot to an image file, and try running it again.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#there-are-two-resources-to-know-for-getting-the-most-out-of-r---cran-and-bioconductor.&#34;&gt;there are two resources to know for getting the most out of R - CRAN and Bioconductor.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#both-of-these-have-lots-of-different-packages-available-which-give-you-access&#34;&gt;Both of these have lots of different packages available, which give you access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#to-functionality-that-other-people-have-developed.-to-name-a-few&#34;&gt;to functionality that other people have developed. To name a few…&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ggplot2&#34;&gt;ggplot2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dplyr&#34;&gt;dplyr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bsgenome&#34;&gt;BSgenome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#biomart&#34;&gt;biomaRt&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#databases&#34;&gt;2. Databases&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#drawing-data-driven-conclusions&#34;&gt;3. Drawing data-driven conclusions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;contents&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#objects&#34;&gt;Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#numbers&#34;&gt;Numbers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#variables&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#after-each-variable-assignment,-write-down-what-you-think-you&amp;#39;ll-see,&#34;&gt;After each variable assignment, write down what you think you’ll see,&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#then-print-the-true-value&#34;&gt;then print the true value&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#variables&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#numbers&#34;&gt;Numbers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:-print(a)-will-show-1&#34;&gt;Prediction: print(a) will show 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#strings-(of-characters)&#34;&gt;Strings (of characters)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c()-is-a-function-that-makes-a-vector&#34;&gt;c() is a function that makes a vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functions&#34;&gt;Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c()-is-a-function,-and-it-returns-a-vector&#34;&gt;c() is a function, and it returns a vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-use-the-mean()-function-to-get-the-average-of-the-vector&#34;&gt;we can use the mean() function to get the average of the vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-even-create-our-own-functions&#34;&gt;we can even create our own functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functions-also-have-documentation-that-is-accessible-by-using-?-or&#34;&gt;functions also have documentation that is accessible by using ? or&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-help-funciton-help()&#34;&gt;the help funciton help()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#more-types-of-objects&#34;&gt;More types of objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-saw-numbers-and-strings&#34;&gt;We saw numbers and strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#booleans&#34;&gt;Booleans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vectors&#34;&gt;Vectors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#factors-(for-categorical-variables)&#34;&gt;Factors (for categorical variables)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lists&#34;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction:&#34;&gt;Prediction:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dataframes&#34;&gt;Dataframes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#very-useful-for-storing-multiple-pieces-of-data-together.&#34;&gt;Very useful for storing multiple pieces of data together.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-want-shell-colour-as-a-categorical-variable&#34;&gt;We want shell colour as a categorical variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-should-we-put-inside-the-as.factor()-function?-replace-the-string-below.&#34;&gt;What should we put inside the as.factor() function? Replace the string below.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#matrices-are-to-dataframes-as-lists-are-to-vectors.-similar-in-appearance,-with&#34;&gt;Matrices are to dataframes as lists are to vectors. Similar in appearance, with&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#some-usage-differences.-a-matrix-can-have-a-matrix-inside-it,-in-the-way-that&#34;&gt;some usage differences. A matrix can have a matrix inside it, in the way that&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-list-of-lists-is-possible.&#34;&gt;a list of lists is possible.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cbind-is-for-column-bind,-rbind-is-for-row-bind&#34;&gt;cbind is for column bind, rbind is for row bind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#accessing-data-(indexing)&#34;&gt;accessing data (indexing)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-can-be-accessed-out-of-datastructures,-like-lists,-vectors,-dataframes,-matricies&#34;&gt;data can be accessed out of datastructures, like lists, vectors, dataframes, matricies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#single-%5B%5D-returns-an-object-of-the-same-type,-double-%5B%5B%5D%5D-may-returns-an-object-of-a-different-type.&#34;&gt;single [] returns an object of the same type, double [[]] may returns an object of a different type.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-keep-accessing-within-the-return-object&#34;&gt;we can keep accessing within the return object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#we-can-also-view-columns-of-the-dataframe-by-name.-can-index-with-$-or-%5B%5B%5D%5D&#34;&gt;We can also view columns of the dataframe by name. Can index with $ or [[]]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#this-takes-a-little-practice-to-get-used-to!-smart-indexing-and-subsetting&#34;&gt;This takes a little practice to get used to! Smart indexing and subsetting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#yield-elegant-solutions.&#34;&gt;yield elegant solutions.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plotting&#34;&gt;plotting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-~-operator-lets-us-write-formulas.-this-is-great-for-plotting&#34;&gt;the ~ operator lets us write formulas. This is great for plotting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#and-we-can-add-extra-parameters-for-nice-looking-plots&#34;&gt;and we can add extra parameters for nice looking plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scripts&#34;&gt;Scripts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#up-until-now,-this-.r-file-is-not-a-useful-script.-you-can-press-%22run%22,-but-you&#34;&gt;up until now, this .R file is not a useful script. You can press “run”, but you&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#won&amp;#39;t-see-anything-happen.-this-isn&amp;#39;t-because-nothing&amp;#39;s-happening,-but-rather-the&#34;&gt;won’t see anything happen. This isn’t because nothing’s happening, but rather the&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#results-are-not-being-output-to-somewhere-you-can-see.-to-fix-this,-uncomment-the&#34;&gt;results are not being output to somewhere you can see. To fix this, uncomment the&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#next-line-to-save-the-plot-to-an-image-file,-and-try-running-it-again.&#34;&gt;next line to save the plot to an image file, and try running it again.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#there-are-two-resources-to-know-for-getting-the-most-out-of-r---cran-and-bioconductor.&#34;&gt;there are two resources to know for getting the most out of R - CRAN and Bioconductor.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#both-of-these-have-lots-of-different-packages-available,-which-give-you-access&#34;&gt;Both of these have lots of different packages available, which give you access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#to-functionality-that-other-people-have-developed.-to-name-a-few...&#34;&gt;to functionality that other people have developed. To name a few…&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ggplot2&#34;&gt;ggplot2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dplyr&#34;&gt;dplyr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bsgenome&#34;&gt;BSgenome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#biomart&#34;&gt;biomaRt&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#r-basics&#34;&gt;R basics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cran-and-bioconductor&#34;&gt;CRAN and Bioconductor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#databases&#34;&gt;Databases&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#getting-data&#34;&gt;Getting data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-manipulation&#34;&gt;Data manipulation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#subsetting&#34;&gt;Subsetting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-exploration&#34;&gt;Data exploration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#drawing-data-driven-conclusions&#34;&gt;Drawing data-driven conclusions&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#visualization&#34;&gt;Visualization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#statistical-testing&#34;&gt;Statistical testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#databases&#34;&gt;Databases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#drawing-data-driven-conclusions&#34;&gt;Drawing data-driven conclusions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -125,6 +235,252 @@ The workshop was designed by &lt;a href=&#34;https://orcid.org/0000-0003-4762-87
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div id=&#34;objects&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Objects&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;numbers&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Numbers&lt;/h1&gt;
+&lt;p&gt;(0.013 + 0.008 + 0.011) / 3&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variables-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Variables&lt;/h1&gt;
+&lt;p&gt;num_snails &amp;lt;- 3&lt;/p&gt;
+&lt;p&gt;speed_snail1 &amp;lt;- 0.013
+speed_snail2 &amp;lt;- 0.008
+speed_snail3 &amp;lt;- 0.011&lt;/p&gt;
+&lt;p&gt;(speed_snail1 + speed_snail2 + speed_snail3) / num_snails&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-structures&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Structures&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;after-each-variable-assignment-write-down-what-you-think-youll-see&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;After each variable assignment, write down what you think you’ll see,&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;then-print-the-true-value&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;then print the true value&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variables-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Variables&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;numbers-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Numbers&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-printa-will-show-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction: print(a) will show 1&lt;/h1&gt;
+&lt;p&gt;a &amp;lt;- 1
+print(a)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;strings-of-characters&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Strings (of characters)&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;b &amp;lt;- “my snail is the fastest!”
+print(b)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;c-is-a-function-that-makes-a-vector&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;c() is a function that makes a vector&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;snail_speeds &amp;lt;- c(speed_snail1, speed_snail2, speed_snail3)
+print(snail_speeds)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;functions-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Functions&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;c-is-a-function-and-it-returns-a-vector&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;c() is a function, and it returns a vector&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;we-can-use-the-mean-function-to-get-the-average-of-the-vector&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;we can use the mean() function to get the average of the vector&lt;/h1&gt;
+&lt;p&gt;mean(snail_speeds)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;we-can-even-create-our-own-functions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;we can even create our own functions&lt;/h1&gt;
+&lt;p&gt;fastest_snail &amp;lt;- function(speeds){&lt;/p&gt;
+&lt;p&gt;snail_num &amp;lt;- which(speeds == max(speeds))
+message &amp;lt;- sprintf(“The fastest is snail number %s”, snail_num)&lt;/p&gt;
+&lt;p&gt;return(message)
+}&lt;/p&gt;
+&lt;p&gt;fastest_snail(snail_speeds)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;functions-also-have-documentation-that-is-accessible-by-using-or&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;functions also have documentation that is accessible by using ? or&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-help-funciton-help&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;the help funciton help()&lt;/h1&gt;
+&lt;p&gt;?mean
+help(mean)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;more-types-of-objects&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;More types of objects&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;we-saw-numbers-and-strings&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;We saw numbers and strings&lt;/h1&gt;
+&lt;p&gt;print(a)
+print(b)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;booleans&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Booleans&lt;/h1&gt;
+&lt;p&gt;print(TRUE == TRUE)
+print(TRUE == FALSE)
+print(TRUE != FALSE)
+print(7 &amp;lt; 8)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;vectors&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Vectors&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;c &amp;lt;- 1:5
+print(c)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;factors-for-categorical-variables&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Factors (for categorical variables)&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;shell_snail1 &amp;lt;- factor(“brown”, levels = c(“brown”, “orange”))
+print(shell_snail1)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lists&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Lists&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-4&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;d &amp;lt;- list(1,2,3,4,5)
+print(d)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-5&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;e &amp;lt;- list(b, “it came in”, a, “st place”)
+print(e)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-6&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;f &amp;lt;- unlist(e)
+print(f)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prediction-7&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prediction:&lt;/h1&gt;
+&lt;p&gt;g &amp;lt;- paste(f, collapse = &#34; &#34;)
+print(g)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dataframes&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Dataframes&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;very-useful-for-storing-multiple-pieces-of-data-together.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Very useful for storing multiple pieces of data together.&lt;/h1&gt;
+&lt;p&gt;print(snail_speeds)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;we-want-shell-colour-as-a-categorical-variable&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;We want shell colour as a categorical variable&lt;/h1&gt;
+&lt;p&gt;shell_snail1 &amp;lt;- “brown”
+shell_snail2 &amp;lt;- “orange”
+shell_snail3 &amp;lt;- “brown”&lt;/p&gt;
+&lt;p&gt;snail_shells &amp;lt;- c(shell_snail1, shell_snail2, shell_snail3)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-should-we-put-inside-the-as.factor-function-replace-the-string-below.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;What should we put inside the as.factor() function? Replace the string below.&lt;/h1&gt;
+&lt;p&gt;snail_shells_factor &amp;lt;- as.factor(“replace this”)
+print(snail_shells_factor)&lt;/p&gt;
+&lt;p&gt;snail_data &amp;lt;- data.frame(speed = snail_speeds, shell_colour = snail_shells_factor)
+print(snail_data)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;matrices-are-to-dataframes-as-lists-are-to-vectors.-similar-in-appearance-with&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Matrices are to dataframes as lists are to vectors. Similar in appearance, with&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-usage-differences.-a-matrix-can-have-a-matrix-inside-it-in-the-way-that&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;some usage differences. A matrix can have a matrix inside it, in the way that&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-list-of-lists-is-possible.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;a list of lists is possible.&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cbind-is-for-column-bind-rbind-is-for-row-bind&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;cbind is for column bind, rbind is for row bind&lt;/h1&gt;
+&lt;p&gt;h &amp;lt;- cbind(snail_speeds, snail_shells)
+print(h)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;accessing-data-indexing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;accessing data (indexing)&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-can-be-accessed-out-of-datastructures-like-lists-vectors-dataframes-matricies&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;data can be accessed out of datastructures, like lists, vectors, dataframes, matricies&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;single-returns-an-object-of-the-same-type-double-may-returns-an-object-of-a-different-type.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;single [] returns an object of the same type, double [[]] may returns an object of a different type.&lt;/h1&gt;
+&lt;p&gt;print(snail_data)
+print(snail_data[1])
+print(snail_data[[1]])&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;we-can-keep-accessing-within-the-return-object&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;we can keep accessing within the return object&lt;/h1&gt;
+&lt;p&gt;print(snail_data[[1]][2])&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;we-can-also-view-columns-of-the-dataframe-by-name.-can-index-with-or&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;We can also view columns of the dataframe by name. Can index with $ or [[]]&lt;/h1&gt;
+&lt;p&gt;print(snail_data$speed)
+print(snail_data[[“speed”]])&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;this-takes-a-little-practice-to-get-used-to-smart-indexing-and-subsetting&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;This takes a little practice to get used to! Smart indexing and subsetting&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;yield-elegant-solutions.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;yield elegant solutions.&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plotting-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;plotting&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-operator-lets-us-write-formulas.-this-is-great-for-plotting&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;the ~ operator lets us write formulas. This is great for plotting&lt;/h1&gt;
+&lt;p&gt;group_averages &amp;lt;- aggregate(speed ~ shell_colour, data = snail_data, FUN = mean)
+barplot(group_averages$speed)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;and-we-can-add-extra-parameters-for-nice-looking-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;and we can add extra parameters for nice looking plots&lt;/h1&gt;
+&lt;p&gt;barplot(group_averages&lt;span class=&#34;math inline&#34;&gt;\(speed, col = levels(group_averages\)&lt;/span&gt;shell_colour),
+main = “Average snail speed”, ylab = “m/s”, names.arg = c(“brown shell”, “orange shell”))&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scripts-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Scripts&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;up-until-now-this-.r-file-is-not-a-useful-script.-you-can-press-run-but-you&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;up until now, this .R file is not a useful script. You can press “run”, but you&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wont-see-anything-happen.-this-isnt-because-nothings-happening-but-rather-the&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;won’t see anything happen. This isn’t because nothing’s happening, but rather the&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;results-are-not-being-output-to-somewhere-you-can-see.-to-fix-this-uncomment-the&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;results are not being output to somewhere you can see. To fix this, uncomment the&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;next-line-to-save-the-plot-to-an-image-file-and-try-running-it-again.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;next line to save the plot to an image file, and try running it again.&lt;/h1&gt;
+&lt;p&gt;png()
+barplot(group_averages&lt;span class=&#34;math inline&#34;&gt;\(speed, col = levels(group_averages\)&lt;/span&gt;shell_colour),
+main = “Average snail speed”, ylab = “m/s”, names.arg = c(“brown shell”, “orange shell”))
+dev.off()&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;there-are-two-resources-to-know-for-getting-the-most-out-of-r---cran-and-bioconductor.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;there are two resources to know for getting the most out of R - CRAN and Bioconductor.&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;both-of-these-have-lots-of-different-packages-available-which-give-you-access&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Both of these have lots of different packages available, which give you access&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;to-functionality-that-other-people-have-developed.-to-name-a-few&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;to functionality that other people have developed. To name a few…&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ggplot2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;ggplot2&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dplyr&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;dplyr&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bsgenome&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;BSgenome&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;biomart&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;biomaRt&lt;/h1&gt;
 &lt;div id=&#34;databases&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2. Databases&lt;/h2&gt;
 &lt;div id=&#34;getting-data&#34; class=&#34;section level3&#34;&gt;
@@ -230,7 +586,7 @@ plot( stringNetwork,
       vertex.label = NA,
       main = &amp;quot;Network from STRING data&amp;quot;
     )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;With these settings, size of a node increases with degree, colour is dictated by
 community membership. We can see that there are several fairly well connected nodes
 with high degree of connectivity to other nodes. These nodes tend to be members of
@@ -243,15 +599,16 @@ large and well connected communities.&lt;/p&gt;
 &lt;h3&gt;3.2 Statistical testing&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Instructions for installing required software</title>
-      <link>/lil-bioinf/dependencies/</link>
+      <link>https://harrig12.github.io/lil-bioinf/dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/dependencies/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/dependencies/</guid>
       <description>
 
 
@@ -264,24 +621,24 @@ large and well connected communities.&lt;/p&gt;
 &lt;div id=&#34;download-and-installation-of-r-language&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Download and installation of &lt;a href=&#34;https://cran.utstat.utoronto.ca/&#34;&gt;R language&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Following the link above will take you to the download site for the University of Toronto (hosted by the statistics department). There are download instructions for Linux, Mac, and Windows. We recommend getting the most recent version of R.&lt;/p&gt;
-&lt;p&gt;Mac: The download link will be under “Latest release” and will look like &lt;code&gt;R-3.6.1.pkg&lt;/code&gt;. Make sure you have XQuartz also installed. Please be patient, as this can take some time if this has not been set up on your machine before.&lt;/p&gt;
-&lt;p&gt;Windows: Follow the &lt;code&gt;install R for the first time&lt;/code&gt; link, and the download link will be at the top of the page, and look like &lt;code&gt;Download R 3.6.1 for Windows&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mac&lt;/em&gt;: The download link will be under “Latest release” and will look like &lt;code&gt;R-3.6.1.pkg&lt;/code&gt;. Make sure you have &lt;a href=&#34;https://www.xquartz.org/&#34;&gt;XQuartz&lt;/a&gt; also installed. Please be patient, as this can take some time if this has not been set up on your machine before.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Windows&lt;/em&gt;: Follow the &lt;code&gt;install R for the first time&lt;/code&gt; link, and the download link will be at the top of the page, and look like &lt;code&gt;Download R 3.6.1 for Windows&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;download-and-installation-of-rstudio&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Download and installation of &lt;a href=&#34;https://rstudio.com/products/rstudio/download/#download&#34;&gt;RStudio&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Please install RStudio for Desktop (Open Source Licence - the free one!). The link above will take you to the right download section.&lt;/p&gt;
-&lt;p&gt;Mac: Download the &lt;code&gt;.dmg&lt;/code&gt; file, and drag this into your &lt;code&gt;Applications&lt;/code&gt; folder.&lt;/p&gt;
-&lt;p&gt;Windows: Download and run the &lt;code&gt;.exe&lt;/code&gt; file, and follow the set-up wizard instructions.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mac&lt;/em&gt;: Download the &lt;code&gt;.dmg&lt;/code&gt; file, and drag this into your &lt;code&gt;Applications&lt;/code&gt; folder.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Windows&lt;/em&gt;: Download and run the &lt;code&gt;.exe&lt;/code&gt; file, and follow the set-up wizard instructions.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Adding Page Items</title>
-      <link>/lil-bioinf/adding-menu-items/</link>
+      <link>https://harrig12.github.io/lil-bioinf/adding-menu-items/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/adding-menu-items/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/adding-menu-items/</guid>
       <description>&lt;p&gt;Indigo supports adding a simple navigation-style menu items across the top of the site. To do so, simply add a &lt;code&gt;menu: &amp;quot;main&amp;quot;&lt;/code&gt; entry in your page&amp;rsquo;s front matter (TOML format shown).&lt;/p&gt;
 
 &lt;p&gt;If no date is included in the front matter, then the published date won&amp;rsquo;t be shown (as in this page).&lt;/p&gt;
@@ -290,10 +647,10 @@ large and well connected communities.&lt;/p&gt;
     
     <item>
       <title>Author Bios</title>
-      <link>/lil-bioinf/author-bios/</link>
+      <link>https://harrig12.github.io/lil-bioinf/author-bios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/author-bios/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/author-bios/</guid>
       <description>&lt;p&gt;The bottom of every page in the theme can optionally show a short biography of the site author, including a profile picture, email link, and location.&lt;/p&gt;
 
 &lt;h2 id=&#34;setting-up-the-author-bio&#34;&gt;Setting up the author bio&lt;/h2&gt;
