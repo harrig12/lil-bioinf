@@ -35,13 +35,13 @@ print(a)
 b <- "my snail is the fastest!"
 print(b)
 
-# c() is a function that makes a vector
+# Functions
+
+# c() is a function, and it returns a vector
 # Prediction:
 snail_speeds <- c(speed_snail1, speed_snail2, speed_snail3)
 print(snail_speeds)
 
-# Functions
-# c() is a function, and it returns a vector
 # we can use the mean() function to get the average of the vector
 mean(snail_speeds)
 
@@ -73,15 +73,15 @@ print(TRUE == FALSE)
 print(TRUE != FALSE)
 print(7 < 8)
 
-# Vectors
-# Prediction: 
-c <- 1:5
-print(c)
-
 # Factors (for categorical variables)
 # Prediction: 
 shell_snail1 <- factor("brown", levels = c("brown", "orange"))
 print(shell_snail1)
+
+# Vectors
+# Prediction: 
+c <- 1:5
+print(c)
 
 # Lists
 # Prediction: 
@@ -120,8 +120,6 @@ snail_data <- data.frame(speed = snail_speeds, shell_colour = snail_shells_facto
 print(snail_data)
 
 
-
-
 # Matrices are to dataframes as lists are to vectors. Similar in appearance, with 
 # some usage differences. A matrix can have a matrix inside it, in the way that 
 # a list of lists is possible. 
@@ -130,7 +128,8 @@ print(snail_data)
 h <- cbind(snail_speeds, snail_shells)
 print(h)
 
-# accessing data (indexing)
+
+# accessing data (subsetting)
 # data can be accessed out of datastructures, like lists, vectors, dataframes, matricies
 # single [] returns an object of the same type, double [[]] may returns an object of a different type.
 print(snail_data)
@@ -144,8 +143,30 @@ print(snail_data[[1]][2])
 print(snail_data$speed)
 print(snail_data[["speed"]])
 
+# Complare this with column selection by index
+print(snail_data[,1])
+
 # This takes a little practice to get used to! Smart indexing and subsetting 
 # yield elegant solutions. 
+
+# Whe you're starting out, you may find it easier to use subset, and the dplyr package's filter
+?subset
+?filter
+
+if (! require(dplyr, quietly = TRUE)) {
+  install.packages("dplyr")
+  library(dplyr)
+}
+
+?filter
+
+# We can subset with a boolean vector.
+print(c(T, F, T))
+print( snail_data[c(T, F, T) ,] )
+
+print(snail_data$shell_colour == "brown")
+
+print( snail_data[snail_data$shell_colour == "brown" ,] )
 
 # plotting
 # the ~ operator lets us write formulas. This is great for plotting
@@ -156,6 +177,32 @@ barplot(group_averages$speed)
 barplot(group_averages$speed, col = levels(group_averages$shell_colour),
         main = "Average snail speed", ylab = "m/s", names.arg = c("brown shell", "orange shell"))
 
+if (! require(ggplot2, quietly = TRUE)) {
+  install.packages("ggplot2")
+  library(ggplot2)
+}
+
+g <- ggplot(data = group_averages) 
+print(g)
+
+# g with scatter plot (point geometry). Note: no assignment to g object
+g + geom_point(mapping = aes(x = shell_colour, y = speed, colour = shell_colour))
+
+# ggplot objects have additive elements. Note: assignment to g object
+g <- g + geom_bar(mapping = aes(x = shell_colour, y = speed, fill = shell_colour),
+             stat = "identity")
+print(g)
+
+# there are lots of themes and colour pallets to play with. ggplot is very flexible.
+g <- g + scale_fill_brewer(palette = "Set1")
+print(g)
+
+# Adding an element that is already present will override previous settings.
+g <- g + scale_fill_brewer(palette = "Accent")
+print(g)
+
+g <- g + scale_fill_manual(values = c("#C4961A", "#D16309"))
+print(g)
 
 # Scripts
 
@@ -164,10 +211,15 @@ barplot(group_averages$speed, col = levels(group_averages$shell_colour),
 # results are not being output to somewhere you can see. To fix this, uncomment the 
 # next line to save the plot to an image file, and try running it again.
 
-png()
-barplot(group_averages$speed, col = levels(group_averages$shell_colour),
-        main = "Average snail speed", ylab = "m/s", names.arg = c("brown shell", "orange shell"))
-dev.off()
+#png()
+#barplot(group_averages$speed, col = levels(group_averages$shell_colour),
+#        main = "Average snail speed", ylab = "m/s", names.arg = c("brown shell", "orange shell"))
+#dev.off()
+
+# similarly, with ggplot...
+
+#g <- g + ggtitle("Avgerage snail speed by shell colour")
+#ggsave(plot = g, filename = "~/Downloads/ggImage.png")
 
 # there are two resources to know for getting the most out of R - CRAN and Bioconductor.
 # Both of these have lots of different packages available, which give you access
@@ -176,6 +228,6 @@ dev.off()
 # dplyr
 # BSgenome
 # biomaRt
-# 
+
 
 # [END]
