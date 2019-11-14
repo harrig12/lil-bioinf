@@ -4,6 +4,7 @@ menu: main
 title: About the workshop
 type: "about"
 weight: 1
+favicon: favicon.png
 ---
 
 This is a introductory-level R workshop designed to give a brief overview of the R language, and some small bioinformatics tasks that function as stand-alone examples of the skills that a budding bioinformaticist should have in their toolbox.

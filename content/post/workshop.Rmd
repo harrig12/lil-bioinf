@@ -3,6 +3,7 @@ title: "R for bioinformatics (and more!)"
 draft: false
 weight: 1
 summary: "A gentle introduction in three parts."
+favicon: favicon.png
 output:
   blogdown::html_page:
     toc: true
@@ -18,40 +19,243 @@ devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8",
 ```
 
 
-## Contents
+## 1. Introduction
+This page wis generated using Rmarkdown. It shows code in blocks, and the results of running that code below it.
 
-```{r toc, echo=FALSE} 
-# toc code from https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/
-render_toc("workshop.Rmd", toc_header_name = "Contents", toc_depth = 2, )
+Blocks that start with `##` are the output. 
+
+The code shown here is replicated from the scripts we go through in the workshop. We will cover in detail each section, in tandem with our [slides](../workshop_files/slides.pdf).
+
+The purpose of posting this content is for reference only, it is not intended to be a stand-alone tutorial.
+
+### 1.1 Objects
+There are a lot of different types of objects in R. Each is useful for different purposes. 
+
+```{r}
+# Numbers
+(0.013 + 0.008 + 0.011) / 3
+```
+
+### 1.2 Variables
+Variables let us store objects with a name, and make them easy to access later. We can use variables in the same way we use the objects they refer to.
+
+We can view a variable `x` with `print(x)`, or by simply writing `x`
+
+```{r}
+num_snails <- 3
+
+speed_snail1 <- 0.013
+speed_snail2 <- 0.008
+speed_snail3 <- 0.011
+
+(speed_snail1 + speed_snail2 + speed_snail3) / num_snails
+```
+
+```{r}
+# Numeric
+a <- 1
+print(a)
+
+# Strings (of characters)
+b <- "my snail is the fastest!"
+print(b)
+```
+
+### 1.3 Functions
+```{r}
+# c() is a function, and it returns a vector
+snail_speeds <- c(speed_snail1, speed_snail2, speed_snail3)
+print(snail_speeds)
+
+# we can use the mean() function to get the average of the vector
+mean(snail_speeds)
+
+# we can even create our own functions
+fastest_snail <- function(speeds){
+  
+  snail_num <- which(speeds == max(speeds))
+  message <- sprintf("The fastest is snail number %s", snail_num)
+  
+  return(message)
+}
+
+fastest_snail(snail_speeds)
+```
+
+Functions also have documentation that is accessible by using ? or the help funciton help()
+```{r}
+?mean
+help(mean)
+```
+
+### 1.4 More types of objects
+```{r}
+# We saw numbers and strings
+print(a)
+print(b)
+
+# Booleans 
+print(TRUE == TRUE)
+print(TRUE == FALSE)
+print(TRUE != FALSE)
+print(7 < 8)
+
+# Factors (for categorical variables)
+shell_snail1 <- factor("brown", levels = c("brown", "orange"))
+print(shell_snail1)
+
+# Vectors
+c <- 1:5
+print(c)
+
+# Lists
+d <- list(1,2,3,4,5)
+print(d)
+
+e <- list(b, "it came in ", a, "st place")
+print(e)
+
+f <- unlist(e)
+print(f)
+
+g <- paste(f, collapse = " ")
+print(g)
+```
+
+### 1.5 Dataframes
+Dataframes are very useful for storing multiple pieces of data together. 
+```{r}
+print(snail_speeds)
+
+# We want shell colour as a categorical variable
+shell_snail1 <- "brown"
+shell_snail2 <- "orange"
+shell_snail3 <- "brown"
+
+snail_shells <- c(shell_snail1, shell_snail2, shell_snail3)
+
+# What should we put inside the as.factor() function? Replace the string below.
+snail_shells_factor <- as.factor(snail_shells)
+print(snail_shells_factor)
+
+snail_data <- data.frame(speed = snail_speeds, shell_colour = snail_shells_factor)
+print(snail_data)
+```
+
+Matrices are to dataframes as lists are to vectors. Similar in appearance, with some usage differences. A matrix can have a matrix inside it, in the way that a list of lists is possible. Matrices and lists can only hold one type of object.
+
+```{r}
+# cbind is for column bind, rbind is for row bind
+h <- cbind(snail_speeds, snail_shells)
+print(h)
 ```
 
 
-## 1. Introduction
+### 1.6 Accessing data (subsetting)
 
-### 1.1 R basics
+Data can be accessed out of datastructures, like lists, vectors, dataframes, matricies
+```{r}
+# single [] returns an object of the same type, double [[]] may returns an object of a different type.
+print(snail_data)
+print(snail_data[1])
+print(snail_data[[1]])
 
-#### 1.1.1 RStudio environment 
-- panes
-- projects
+# we can keep accessing within the return object
+print(snail_data[[1]][2])
 
-#### 1.1.2 Variables
+# We can also view columns of the dataframe by name. Can index with $ or [[]]
+print(snail_data$speed)
+print(snail_data[["speed"]])
 
-#### 1.1.3 Comments
+# Complare this with column selection by index
+print(snail_data[,1])
 
-#### 1.1.4 Vectors and Lists
+# This takes a little practice to get used to! Smart indexing and subsetting 
+# yield elegant solutions. 
 
-#### 1.1.5 Data Frames
+# Whe you're starting out, you may find it easier to use subset, and the dplyr package's filter
+?subset
+?filter
 
-#### 1.1.6 Functions
-- `?` for help
+if (! require(dplyr, quietly = TRUE)) {
+  install.packages("dplyr")
+  library(dplyr)
+}
 
-#### 1.1.7 Plotting
+?filter
 
-#### 1.1.8 Scripts
+# We can subset with a boolean vector.
+print(c(T, F, T))
+print( snail_data[c(T, F, T) ,] )
 
-### 1.2 CRAN and Bioconductor
-- types of packages available
-- anova, t-test, etc
+print(snail_data$shell_colour == "brown")
+
+print( snail_data[snail_data$shell_colour == "brown" ,] )
+```
+
+### 1.7 Plotting
+
+```{r}
+# the ~ operator lets us write formulas. This is great for plotting
+group_averages <- aggregate(speed ~ shell_colour, data = snail_data, FUN = mean)
+barplot(group_averages$speed)
+
+# and we can add extra parameters for nice looking plots
+barplot(group_averages$speed, col = levels(group_averages$shell_colour),
+        main = "Average snail speed", ylab = "m/s", names.arg = c("brown shell", "orange shell"))
+
+if (! require(ggplot2, quietly = TRUE)) {
+  install.packages("ggplot2")
+  library(ggplot2)
+}
+
+g <- ggplot(data = group_averages) 
+print(g)
+
+# g with scatter plot (point geometry). Note: no assignment to g object
+g + geom_point(mapping = aes(x = shell_colour, y = speed, colour = shell_colour))
+
+# ggplot objects have additive elements. Note: assignment to g object
+g <- g + geom_bar(mapping = aes(x = shell_colour, y = speed, fill = shell_colour),
+             stat = "identity")
+print(g)
+
+# there are lots of themes and colour pallets to play with. ggplot is very flexible.
+g <- g + scale_fill_brewer(palette = "Set1")
+print(g)
+
+# Adding an element that is already present will override previous settings.
+
+g <- g + scale_fill_manual(values = c("#C4961A", "#D16309"))
+print(g)
+```
+
+### 1.8 Scripts
+
+An .R file with no saved output is not generally a useful script. You can press "run", but you won't see anything happen. This isn't because nothing's happening, but rather the results are not being output to somewhere you can see. We can save plots, or data by writing to files...
+
+```{r eval = F}
+# the next few lines save a plot to an image file
+png()
+barplot(group_averages$speed, col = levels(group_averages$shell_colour),
+        main = "Average snail speed", ylab = "m/s", names.arg = c("brown shell", "orange shell"))
+dev.off()
+
+# similarly, with ggplot...
+g <- g + ggtitle("Avgerage snail speed by shell colour")
+ggsave(plot = g, filename = "~/Downloads/ggImage.png")
+```
+
+### 1.9 More functionality
+
+There are two resources to know for getting the most out of R - CRAN and Bioconductor. Both of these have lots of different packages available, which give you access to functionality that other people have developed. To name a few...
+- ggplot2
+- dplyr
+- BSgenome
+- biomaRt
+
+
+
 
 ## 2. Databases
 
@@ -66,7 +270,7 @@ render_toc("workshop.Rmd", toc_header_name = "Contents", toc_depth = 2, )
 ### 2.2.2 Data exploration
 
 
-## 3. Drawing data-driven conclusions
+## 3. Data-driven conclusions
 
 ### 3.1 Visualization
 
@@ -168,3 +372,4 @@ large group of interacting proteins has many interactions. There are two distinc
 large and well connected communities.
 
 ### 3.2 Statistical testing
+
