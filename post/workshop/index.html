@@ -7,7 +7,7 @@
     <meta name="description" content="Workshop - R for Bioinformatics">
     <meta name="author" content="">
     
-    <link rel="shortcut icon" href="/favicon.ico" />
+    
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
     
@@ -18,22 +18,22 @@
     
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
     
-    <link rel="stylesheet" href=https://harrig12.github.io/lil-bioinf/css/fonts.css />
-    <link rel="stylesheet" href=https://harrig12.github.io/lil-bioinf/css/style.css />
+    <link rel="stylesheet" href=/lil-bioinf/css/fonts.css />
+    <link rel="stylesheet" href=/lil-bioinf/css/style.css />
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div id="sitelogo">
-        <a class="glyph" alt="Home" href="https://harrig12.github.io/lil-bioinf/"><img src=https://harrig12.github.io/lil-bioinf/images/lil-boi.png alt="Site Logo" height="200px" width="64px"></a>
+        <a class="glyph" alt="Home" href="/lil-bioinf/"><img src=/lil-bioinf/images/lil-boi.png alt="Site Logo" height="200px" width="64px"></a>
     </div>
     <header>
         <nav>
     
     <div id="page-nav">
         <div class="page-nav-item">
-            <a href="https://harrig12.github.io/lil-bioinf/">Home</a>
+            <a href="/lil-bioinf/">Home</a>
         </div>
         
             <div class="page-nav-item">
@@ -71,435 +71,294 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#contents">Contents</a></li>
 <li><a href="#introduction">1. Introduction</a></li>
-<li><a href="#objects">Objects</a></li>
-<li><a href="#numbers">Numbers</a></li>
-<li><a href="#variables-1">Variables</a></li>
-<li><a href="#data-structures">Data Structures</a></li>
-<li><a href="#after-each-variable-assignment-write-down-what-you-think-youll-see">After each variable assignment, write down what you think you’ll see,</a></li>
-<li><a href="#then-print-the-true-value">then print the true value</a></li>
-<li><a href="#variables-2">Variables</a></li>
-<li><a href="#numbers-1">Numbers</a></li>
-<li><a href="#prediction-printa-will-show-1">Prediction: print(a) will show 1</a></li>
-<li><a href="#strings-of-characters">Strings (of characters)</a></li>
-<li><a href="#prediction">Prediction:</a></li>
-<li><a href="#c-is-a-function-that-makes-a-vector">c() is a function that makes a vector</a></li>
-<li><a href="#prediction-1">Prediction:</a></li>
-<li><a href="#functions-1">Functions</a></li>
-<li><a href="#c-is-a-function-and-it-returns-a-vector">c() is a function, and it returns a vector</a></li>
-<li><a href="#we-can-use-the-mean-function-to-get-the-average-of-the-vector">we can use the mean() function to get the average of the vector</a></li>
-<li><a href="#we-can-even-create-our-own-functions">we can even create our own functions</a></li>
-<li><a href="#functions-also-have-documentation-that-is-accessible-by-using-or">functions also have documentation that is accessible by using ? or</a></li>
-<li><a href="#the-help-funciton-help">the help funciton help()</a></li>
-<li><a href="#more-types-of-objects">More types of objects</a></li>
-<li><a href="#we-saw-numbers-and-strings">We saw numbers and strings</a></li>
-<li><a href="#booleans">Booleans</a></li>
-<li><a href="#vectors">Vectors</a></li>
-<li><a href="#prediction-2">Prediction:</a></li>
-<li><a href="#factors-for-categorical-variables">Factors (for categorical variables)</a></li>
-<li><a href="#prediction-3">Prediction:</a></li>
-<li><a href="#lists">Lists</a></li>
-<li><a href="#prediction-4">Prediction:</a></li>
-<li><a href="#prediction-5">Prediction:</a></li>
-<li><a href="#prediction-6">Prediction:</a></li>
-<li><a href="#prediction-7">Prediction:</a></li>
-<li><a href="#dataframes">Dataframes</a></li>
-<li><a href="#very-useful-for-storing-multiple-pieces-of-data-together.">Very useful for storing multiple pieces of data together.</a></li>
-<li><a href="#we-want-shell-colour-as-a-categorical-variable">We want shell colour as a categorical variable</a></li>
-<li><a href="#what-should-we-put-inside-the-as.factor-function-replace-the-string-below.">What should we put inside the as.factor() function? Replace the string below.</a></li>
-<li><a href="#matrices-are-to-dataframes-as-lists-are-to-vectors.-similar-in-appearance-with">Matrices are to dataframes as lists are to vectors. Similar in appearance, with</a></li>
-<li><a href="#some-usage-differences.-a-matrix-can-have-a-matrix-inside-it-in-the-way-that">some usage differences. A matrix can have a matrix inside it, in the way that</a></li>
-<li><a href="#a-list-of-lists-is-possible.">a list of lists is possible.</a></li>
-<li><a href="#cbind-is-for-column-bind-rbind-is-for-row-bind">cbind is for column bind, rbind is for row bind</a></li>
-<li><a href="#accessing-data-indexing">accessing data (indexing)</a></li>
-<li><a href="#data-can-be-accessed-out-of-datastructures-like-lists-vectors-dataframes-matricies">data can be accessed out of datastructures, like lists, vectors, dataframes, matricies</a></li>
-<li><a href="#single-returns-an-object-of-the-same-type-double-may-returns-an-object-of-a-different-type.">single [] returns an object of the same type, double [[]] may returns an object of a different type.</a></li>
-<li><a href="#we-can-keep-accessing-within-the-return-object">we can keep accessing within the return object</a></li>
-<li><a href="#we-can-also-view-columns-of-the-dataframe-by-name.-can-index-with-or">We can also view columns of the dataframe by name. Can index with $ or [[]]</a></li>
-<li><a href="#this-takes-a-little-practice-to-get-used-to-smart-indexing-and-subsetting">This takes a little practice to get used to! Smart indexing and subsetting</a></li>
-<li><a href="#yield-elegant-solutions.">yield elegant solutions.</a></li>
-<li><a href="#plotting-1">plotting</a></li>
-<li><a href="#the-operator-lets-us-write-formulas.-this-is-great-for-plotting">the ~ operator lets us write formulas. This is great for plotting</a></li>
-<li><a href="#and-we-can-add-extra-parameters-for-nice-looking-plots">and we can add extra parameters for nice looking plots</a></li>
-<li><a href="#scripts-1">Scripts</a></li>
-<li><a href="#up-until-now-this-.r-file-is-not-a-useful-script.-you-can-press-run-but-you">up until now, this .R file is not a useful script. You can press “run”, but you</a></li>
-<li><a href="#wont-see-anything-happen.-this-isnt-because-nothings-happening-but-rather-the">won’t see anything happen. This isn’t because nothing’s happening, but rather the</a></li>
-<li><a href="#results-are-not-being-output-to-somewhere-you-can-see.-to-fix-this-uncomment-the">results are not being output to somewhere you can see. To fix this, uncomment the</a></li>
-<li><a href="#next-line-to-save-the-plot-to-an-image-file-and-try-running-it-again.">next line to save the plot to an image file, and try running it again.</a></li>
-<li><a href="#there-are-two-resources-to-know-for-getting-the-most-out-of-r---cran-and-bioconductor.">there are two resources to know for getting the most out of R - CRAN and Bioconductor.</a></li>
-<li><a href="#both-of-these-have-lots-of-different-packages-available-which-give-you-access">Both of these have lots of different packages available, which give you access</a></li>
-<li><a href="#to-functionality-that-other-people-have-developed.-to-name-a-few">to functionality that other people have developed. To name a few…</a></li>
-<li><a href="#ggplot2">ggplot2</a></li>
-<li><a href="#dplyr">dplyr</a></li>
-<li><a href="#bsgenome">BSgenome</a></li>
-<li><a href="#biomart">biomaRt</a><ul>
 <li><a href="#databases">2. Databases</a></li>
-<li><a href="#drawing-data-driven-conclusions">3. Drawing data-driven conclusions</a></li>
-</ul></li>
+<li><a href="#data-driven-conclusions">3. Data-driven conclusions</a></li>
 </ul>
 </div>
 
-<div id="contents" class="section level2">
-<h2>Contents</h2>
-<ul>
-<li><a href="#objects">Objects</a></li>
-<li><a href="#numbers">Numbers</a></li>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#data-structures">Data Structures</a></li>
-<li><a href="#after-each-variable-assignment,-write-down-what-you-think-you&#39;ll-see,">After each variable assignment, write down what you think you’ll see,</a></li>
-<li><a href="#then-print-the-true-value">then print the true value</a></li>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#numbers">Numbers</a></li>
-<li><a href="#prediction:-print(a)-will-show-1">Prediction: print(a) will show 1</a></li>
-<li><a href="#strings-(of-characters)">Strings (of characters)</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#c()-is-a-function-that-makes-a-vector">c() is a function that makes a vector</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#functions">Functions</a></li>
-<li><a href="#c()-is-a-function,-and-it-returns-a-vector">c() is a function, and it returns a vector</a></li>
-<li><a href="#we-can-use-the-mean()-function-to-get-the-average-of-the-vector">we can use the mean() function to get the average of the vector</a></li>
-<li><a href="#we-can-even-create-our-own-functions">we can even create our own functions</a></li>
-<li><a href="#functions-also-have-documentation-that-is-accessible-by-using-?-or">functions also have documentation that is accessible by using ? or</a></li>
-<li><a href="#the-help-funciton-help()">the help funciton help()</a></li>
-<li><a href="#more-types-of-objects">More types of objects</a></li>
-<li><a href="#we-saw-numbers-and-strings">We saw numbers and strings</a></li>
-<li><a href="#booleans">Booleans</a></li>
-<li><a href="#vectors">Vectors</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#factors-(for-categorical-variables)">Factors (for categorical variables)</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#lists">Lists</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#prediction:">Prediction:</a></li>
-<li><a href="#dataframes">Dataframes</a></li>
-<li><a href="#very-useful-for-storing-multiple-pieces-of-data-together.">Very useful for storing multiple pieces of data together.</a></li>
-<li><a href="#we-want-shell-colour-as-a-categorical-variable">We want shell colour as a categorical variable</a></li>
-<li><a href="#what-should-we-put-inside-the-as.factor()-function?-replace-the-string-below.">What should we put inside the as.factor() function? Replace the string below.</a></li>
-<li><a href="#matrices-are-to-dataframes-as-lists-are-to-vectors.-similar-in-appearance,-with">Matrices are to dataframes as lists are to vectors. Similar in appearance, with</a></li>
-<li><a href="#some-usage-differences.-a-matrix-can-have-a-matrix-inside-it,-in-the-way-that">some usage differences. A matrix can have a matrix inside it, in the way that</a></li>
-<li><a href="#a-list-of-lists-is-possible.">a list of lists is possible.</a></li>
-<li><a href="#cbind-is-for-column-bind,-rbind-is-for-row-bind">cbind is for column bind, rbind is for row bind</a></li>
-<li><a href="#accessing-data-(indexing)">accessing data (indexing)</a></li>
-<li><a href="#data-can-be-accessed-out-of-datastructures,-like-lists,-vectors,-dataframes,-matricies">data can be accessed out of datastructures, like lists, vectors, dataframes, matricies</a></li>
-<li><a href="#single-%5B%5D-returns-an-object-of-the-same-type,-double-%5B%5B%5D%5D-may-returns-an-object-of-a-different-type.">single [] returns an object of the same type, double [[]] may returns an object of a different type.</a></li>
-<li><a href="#we-can-keep-accessing-within-the-return-object">we can keep accessing within the return object</a></li>
-<li><a href="#we-can-also-view-columns-of-the-dataframe-by-name.-can-index-with-$-or-%5B%5B%5D%5D">We can also view columns of the dataframe by name. Can index with $ or [[]]</a></li>
-<li><a href="#this-takes-a-little-practice-to-get-used-to!-smart-indexing-and-subsetting">This takes a little practice to get used to! Smart indexing and subsetting</a></li>
-<li><a href="#yield-elegant-solutions.">yield elegant solutions.</a></li>
-<li><a href="#plotting">plotting</a></li>
-<li><a href="#the-~-operator-lets-us-write-formulas.-this-is-great-for-plotting">the ~ operator lets us write formulas. This is great for plotting</a></li>
-<li><a href="#and-we-can-add-extra-parameters-for-nice-looking-plots">and we can add extra parameters for nice looking plots</a></li>
-<li><a href="#scripts">Scripts</a></li>
-<li><a href="#up-until-now,-this-.r-file-is-not-a-useful-script.-you-can-press-%22run%22,-but-you">up until now, this .R file is not a useful script. You can press “run”, but you</a></li>
-<li><a href="#won&#39;t-see-anything-happen.-this-isn&#39;t-because-nothing&#39;s-happening,-but-rather-the">won’t see anything happen. This isn’t because nothing’s happening, but rather the</a></li>
-<li><a href="#results-are-not-being-output-to-somewhere-you-can-see.-to-fix-this,-uncomment-the">results are not being output to somewhere you can see. To fix this, uncomment the</a></li>
-<li><a href="#next-line-to-save-the-plot-to-an-image-file,-and-try-running-it-again.">next line to save the plot to an image file, and try running it again.</a></li>
-<li><a href="#there-are-two-resources-to-know-for-getting-the-most-out-of-r---cran-and-bioconductor.">there are two resources to know for getting the most out of R - CRAN and Bioconductor.</a></li>
-<li><a href="#both-of-these-have-lots-of-different-packages-available,-which-give-you-access">Both of these have lots of different packages available, which give you access</a></li>
-<li><a href="#to-functionality-that-other-people-have-developed.-to-name-a-few...">to functionality that other people have developed. To name a few…</a></li>
-<li><a href="#ggplot2">ggplot2</a></li>
-<li><a href="#dplyr">dplyr</a></li>
-<li><a href="#bsgenome">BSgenome</a></li>
-<li><a href="#biomart">biomaRt</a>
-<ul>
-<li><a href="#databases">Databases</a></li>
-<li><a href="#drawing-data-driven-conclusions">Drawing data-driven conclusions</a></li>
-</ul></li>
-</ul>
-</div>
 <div id="introduction" class="section level2">
 <h2>1. Introduction</h2>
-<div id="r-basics" class="section level3">
-<h3>1.1 R basics</h3>
-<div id="rstudio-environment" class="section level4">
-<h4>1.1.1 RStudio environment</h4>
-<ul>
-<li>panes</li>
-<li>projects</li>
-</ul>
+<p>This page wis generated using Rmarkdown. It shows code in blocks, and the results of running that code below it.</p>
+<p>Blocks that start with <code>##</code> are the output.</p>
+<p>The code shown here is replicated from the scripts we go through in the workshop. We will cover in detail each section, in tandem with our <a href="../workshop_files/slides.pdf">slides</a>.</p>
+<p>The purpose of posting this content is for reference only, it is not intended to be a stand-alone tutorial.</p>
+<div id="objects" class="section level3">
+<h3>1.1 Objects</h3>
+<p>There are a lot of different types of objects in R. Each is useful for different purposes.</p>
+<pre class="r"><code># Numbers
+(0.013 + 0.008 + 0.011) / 3</code></pre>
+<pre><code>## [1] 0.01066667</code></pre>
 </div>
-<div id="variables" class="section level4">
-<h4>1.1.2 Variables</h4>
-</div>
-<div id="comments" class="section level4">
-<h4>1.1.3 Comments</h4>
-</div>
-<div id="vectors-and-lists" class="section level4">
-<h4>1.1.4 Vectors and Lists</h4>
-</div>
-<div id="data-frames" class="section level4">
-<h4>1.1.5 Data Frames</h4>
-</div>
-<div id="functions" class="section level4">
-<h4>1.1.6 Functions</h4>
-<ul>
-<li><code>?</code> for help</li>
-</ul>
-</div>
-<div id="plotting" class="section level4">
-<h4>1.1.7 Plotting</h4>
-</div>
-<div id="scripts" class="section level4">
-<h4>1.1.8 Scripts</h4>
-</div>
-</div>
-<div id="cran-and-bioconductor" class="section level3">
-<h3>1.2 CRAN and Bioconductor</h3>
-<ul>
-<li>types of packages available</li>
-<li>anova, t-test, etc</li>
-</ul>
-</div>
-</div>
-<div id="objects" class="section level1">
-<h1>Objects</h1>
-</div>
-<div id="numbers" class="section level1">
-<h1>Numbers</h1>
-<p>(0.013 + 0.008 + 0.011) / 3</p>
-</div>
-<div id="variables-1" class="section level1">
-<h1>Variables</h1>
-<p>num_snails &lt;- 3</p>
-<p>speed_snail1 &lt;- 0.013
+<div id="variables" class="section level3">
+<h3>1.2 Variables</h3>
+<p>Variables let us store objects with a name, and make them easy to access later. We can use variables in the same way we use the objects they refer to.</p>
+<p>We can view a variable <code>x</code> with <code>print(x)</code>, or by simply writing <code>x</code></p>
+<pre class="r"><code>num_snails &lt;- 3
+
+speed_snail1 &lt;- 0.013
 speed_snail2 &lt;- 0.008
-speed_snail3 &lt;- 0.011</p>
-<p>(speed_snail1 + speed_snail2 + speed_snail3) / num_snails</p>
+speed_snail3 &lt;- 0.011
+
+(speed_snail1 + speed_snail2 + speed_snail3) / num_snails</code></pre>
+<pre><code>## [1] 0.01066667</code></pre>
+<pre class="r"><code># Numeric
+a &lt;- 1
+print(a)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code># Strings (of characters)
+b &lt;- &quot;my snail is the fastest!&quot;
+print(b)</code></pre>
+<pre><code>## [1] &quot;my snail is the fastest!&quot;</code></pre>
 </div>
-<div id="data-structures" class="section level1">
-<h1>Data Structures</h1>
+<div id="functions" class="section level3">
+<h3>1.3 Functions</h3>
+<pre class="r"><code># c() is a function, and it returns a vector
+snail_speeds &lt;- c(speed_snail1, speed_snail2, speed_snail3)
+print(snail_speeds)</code></pre>
+<pre><code>## [1] 0.013 0.008 0.011</code></pre>
+<pre class="r"><code># we can use the mean() function to get the average of the vector
+mean(snail_speeds)</code></pre>
+<pre><code>## [1] 0.01066667</code></pre>
+<pre class="r"><code># we can even create our own functions
+fastest_snail &lt;- function(speeds){
+  
+  snail_num &lt;- which(speeds == max(speeds))
+  message &lt;- sprintf(&quot;The fastest is snail number %s&quot;, snail_num)
+  
+  return(message)
+}
+
+fastest_snail(snail_speeds)</code></pre>
+<pre><code>## [1] &quot;The fastest is snail number 1&quot;</code></pre>
+<p>Functions also have documentation that is accessible by using ? or the help funciton help()</p>
+<pre class="r"><code>?mean
+help(mean)</code></pre>
 </div>
-<div id="after-each-variable-assignment-write-down-what-you-think-youll-see" class="section level1">
-<h1>After each variable assignment, write down what you think you’ll see,</h1>
+<div id="more-types-of-objects" class="section level3">
+<h3>1.4 More types of objects</h3>
+<pre class="r"><code># We saw numbers and strings
+print(a)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>print(b)</code></pre>
+<pre><code>## [1] &quot;my snail is the fastest!&quot;</code></pre>
+<pre class="r"><code># Booleans 
+print(TRUE == TRUE)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>print(TRUE == FALSE)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>print(TRUE != FALSE)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>print(7 &lt; 8)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code># Factors (for categorical variables)
+shell_snail1 &lt;- factor(&quot;brown&quot;, levels = c(&quot;brown&quot;, &quot;orange&quot;))
+print(shell_snail1)</code></pre>
+<pre><code>## [1] brown
+## Levels: brown orange</code></pre>
+<pre class="r"><code># Vectors
+c &lt;- 1:5
+print(c)</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code># Lists
+d &lt;- list(1,2,3,4,5)
+print(d)</code></pre>
+<pre><code>## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 2
+## 
+## [[3]]
+## [1] 3
+## 
+## [[4]]
+## [1] 4
+## 
+## [[5]]
+## [1] 5</code></pre>
+<pre class="r"><code>e &lt;- list(b, &quot;it came in &quot;, a, &quot;st place&quot;)
+print(e)</code></pre>
+<pre><code>## [[1]]
+## [1] &quot;my snail is the fastest!&quot;
+## 
+## [[2]]
+## [1] &quot;it came in &quot;
+## 
+## [[3]]
+## [1] 1
+## 
+## [[4]]
+## [1] &quot;st place&quot;</code></pre>
+<pre class="r"><code>f &lt;- unlist(e)
+print(f)</code></pre>
+<pre><code>## [1] &quot;my snail is the fastest!&quot; &quot;it came in &quot;             
+## [3] &quot;1&quot;                        &quot;st place&quot;</code></pre>
+<pre class="r"><code>g &lt;- paste(f, collapse = &quot; &quot;)
+print(g)</code></pre>
+<pre><code>## [1] &quot;my snail is the fastest! it came in  1 st place&quot;</code></pre>
 </div>
-<div id="then-print-the-true-value" class="section level1">
-<h1>then print the true value</h1>
+<div id="dataframes" class="section level3">
+<h3>1.5 Dataframes</h3>
+<p>Dataframes are very useful for storing multiple pieces of data together.</p>
+<pre class="r"><code>print(snail_speeds)</code></pre>
+<pre><code>## [1] 0.013 0.008 0.011</code></pre>
+<pre class="r"><code># We want shell colour as a categorical variable
+shell_snail1 &lt;- &quot;brown&quot;
+shell_snail2 &lt;- &quot;orange&quot;
+shell_snail3 &lt;- &quot;brown&quot;
+
+snail_shells &lt;- c(shell_snail1, shell_snail2, shell_snail3)
+
+# What should we put inside the as.factor() function? Replace the string below.
+snail_shells_factor &lt;- as.factor(snail_shells)
+print(snail_shells_factor)</code></pre>
+<pre><code>## [1] brown  orange brown 
+## Levels: brown orange</code></pre>
+<pre class="r"><code>snail_data &lt;- data.frame(speed = snail_speeds, shell_colour = snail_shells_factor)
+print(snail_data)</code></pre>
+<pre><code>##   speed shell_colour
+## 1 0.013        brown
+## 2 0.008       orange
+## 3 0.011        brown</code></pre>
+<p>Matrices are to dataframes as lists are to vectors. Similar in appearance, with some usage differences. A matrix can have a matrix inside it, in the way that a list of lists is possible. Matrices and lists can only hold one type of object.</p>
+<pre class="r"><code># cbind is for column bind, rbind is for row bind
+h &lt;- cbind(snail_speeds, snail_shells)
+print(h)</code></pre>
+<pre><code>##      snail_speeds snail_shells
+## [1,] &quot;0.013&quot;      &quot;brown&quot;     
+## [2,] &quot;0.008&quot;      &quot;orange&quot;    
+## [3,] &quot;0.011&quot;      &quot;brown&quot;</code></pre>
 </div>
-<div id="variables-2" class="section level1">
-<h1>Variables</h1>
+<div id="accessing-data-subsetting" class="section level3">
+<h3>1.6 Accessing data (subsetting)</h3>
+<p>Data can be accessed out of datastructures, like lists, vectors, dataframes, matricies</p>
+<pre class="r"><code># single [] returns an object of the same type, double [[]] may returns an object of a different type.
+print(snail_data)</code></pre>
+<pre><code>##   speed shell_colour
+## 1 0.013        brown
+## 2 0.008       orange
+## 3 0.011        brown</code></pre>
+<pre class="r"><code>print(snail_data[1])</code></pre>
+<pre><code>##   speed
+## 1 0.013
+## 2 0.008
+## 3 0.011</code></pre>
+<pre class="r"><code>print(snail_data[[1]])</code></pre>
+<pre><code>## [1] 0.013 0.008 0.011</code></pre>
+<pre class="r"><code># we can keep accessing within the return object
+print(snail_data[[1]][2])</code></pre>
+<pre><code>## [1] 0.008</code></pre>
+<pre class="r"><code># We can also view columns of the dataframe by name. Can index with $ or [[]]
+print(snail_data$speed)</code></pre>
+<pre><code>## [1] 0.013 0.008 0.011</code></pre>
+<pre class="r"><code>print(snail_data[[&quot;speed&quot;]])</code></pre>
+<pre><code>## [1] 0.013 0.008 0.011</code></pre>
+<pre class="r"><code># Complare this with column selection by index
+print(snail_data[,1])</code></pre>
+<pre><code>## [1] 0.013 0.008 0.011</code></pre>
+<pre class="r"><code># This takes a little practice to get used to! Smart indexing and subsetting 
+# yield elegant solutions. 
+
+# Whe you&#39;re starting out, you may find it easier to use subset, and the dplyr package&#39;s filter
+?subset
+?filter
+
+if (! require(dplyr, quietly = TRUE)) {
+  install.packages(&quot;dplyr&quot;)
+  library(dplyr)
+}</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>?filter</code></pre>
+<pre><code>## Help on topic &#39;filter&#39; was found in the following packages:
+## 
+##   Package               Library
+##   dplyr                 /Library/Frameworks/R.framework/Versions/3.3/Resources/library
+##   stats                 /Library/Frameworks/R.framework/Versions/3.3/Resources/library
+## 
+## 
+## Using the first match ...</code></pre>
+<pre class="r"><code># We can subset with a boolean vector.
+print(c(T, F, T))</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+<pre class="r"><code>print( snail_data[c(T, F, T) ,] )</code></pre>
+<pre><code>##   speed shell_colour
+## 1 0.013        brown
+## 3 0.011        brown</code></pre>
+<pre class="r"><code>print(snail_data$shell_colour == &quot;brown&quot;)</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+<pre class="r"><code>print( snail_data[snail_data$shell_colour == &quot;brown&quot; ,] )</code></pre>
+<pre><code>##   speed shell_colour
+## 1 0.013        brown
+## 3 0.011        brown</code></pre>
 </div>
-<div id="numbers-1" class="section level1">
-<h1>Numbers</h1>
+<div id="plotting" class="section level3">
+<h3>1.7 Plotting</h3>
+<pre class="r"><code># the ~ operator lets us write formulas. This is great for plotting
+group_averages &lt;- aggregate(speed ~ shell_colour, data = snail_data, FUN = mean)
+barplot(group_averages$speed)</code></pre>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code># and we can add extra parameters for nice looking plots
+barplot(group_averages$speed, col = levels(group_averages$shell_colour),
+        main = &quot;Average snail speed&quot;, ylab = &quot;m/s&quot;, names.arg = c(&quot;brown shell&quot;, &quot;orange shell&quot;))
+
+if (! require(ggplot2, quietly = TRUE)) {
+  install.packages(&quot;ggplot2&quot;)
+  library(ggplot2)
+}</code></pre>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<pre class="r"><code>g &lt;- ggplot(data = group_averages) 
+print(g)</code></pre>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-3.png" width="672" /></p>
+<pre class="r"><code># g with scatter plot (point geometry). Note: no assignment to g object
+g + geom_point(mapping = aes(x = shell_colour, y = speed, colour = shell_colour))</code></pre>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-4.png" width="672" /></p>
+<pre class="r"><code># ggplot objects have additive elements. Note: assignment to g object
+g &lt;- g + geom_bar(mapping = aes(x = shell_colour, y = speed, fill = shell_colour),
+             stat = &quot;identity&quot;)
+print(g)</code></pre>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-5.png" width="672" /></p>
+<pre class="r"><code># there are lots of themes and colour pallets to play with. ggplot is very flexible.
+g &lt;- g + scale_fill_brewer(palette = &quot;Set1&quot;)
+print(g)</code></pre>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-6.png" width="672" /></p>
+<pre class="r"><code># Adding an element that is already present will override previous settings.
+
+g &lt;- g + scale_fill_manual(values = c(&quot;#C4961A&quot;, &quot;#D16309&quot;))</code></pre>
+<pre><code>## Scale for &#39;fill&#39; is already present. Adding another scale for &#39;fill&#39;,
+## which will replace the existing scale.</code></pre>
+<pre class="r"><code>print(g)</code></pre>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-7.png" width="672" /></p>
 </div>
-<div id="prediction-printa-will-show-1" class="section level1">
-<h1>Prediction: print(a) will show 1</h1>
-<p>a &lt;- 1
-print(a)</p>
+<div id="scripts" class="section level3">
+<h3>1.8 Scripts</h3>
+<p>An .R file with no saved output is not generally a useful script. You can press “run”, but you won’t see anything happen. This isn’t because nothing’s happening, but rather the results are not being output to somewhere you can see. We can save plots, or data by writing to files…</p>
+<pre class="r"><code># the next few lines save a plot to an image file
+png()
+barplot(group_averages$speed, col = levels(group_averages$shell_colour),
+        main = &quot;Average snail speed&quot;, ylab = &quot;m/s&quot;, names.arg = c(&quot;brown shell&quot;, &quot;orange shell&quot;))
+dev.off()
+
+# similarly, with ggplot...
+g &lt;- g + ggtitle(&quot;Avgerage snail speed by shell colour&quot;)
+ggsave(plot = g, filename = &quot;~/Downloads/ggImage.png&quot;)</code></pre>
 </div>
-<div id="strings-of-characters" class="section level1">
-<h1>Strings (of characters)</h1>
+<div id="more-functionality" class="section level3">
+<h3>1.9 More functionality</h3>
+<p>There are two resources to know for getting the most out of R - CRAN and Bioconductor. Both of these have lots of different packages available, which give you access to functionality that other people have developed. To name a few…
+- ggplot2
+- dplyr
+- BSgenome
+- biomaRt</p>
 </div>
-<div id="prediction" class="section level1">
-<h1>Prediction:</h1>
-<p>b &lt;- “my snail is the fastest!”
-print(b)</p>
 </div>
-<div id="c-is-a-function-that-makes-a-vector" class="section level1">
-<h1>c() is a function that makes a vector</h1>
-</div>
-<div id="prediction-1" class="section level1">
-<h1>Prediction:</h1>
-<p>snail_speeds &lt;- c(speed_snail1, speed_snail2, speed_snail3)
-print(snail_speeds)</p>
-</div>
-<div id="functions-1" class="section level1">
-<h1>Functions</h1>
-</div>
-<div id="c-is-a-function-and-it-returns-a-vector" class="section level1">
-<h1>c() is a function, and it returns a vector</h1>
-</div>
-<div id="we-can-use-the-mean-function-to-get-the-average-of-the-vector" class="section level1">
-<h1>we can use the mean() function to get the average of the vector</h1>
-<p>mean(snail_speeds)</p>
-</div>
-<div id="we-can-even-create-our-own-functions" class="section level1">
-<h1>we can even create our own functions</h1>
-<p>fastest_snail &lt;- function(speeds){</p>
-<p>snail_num &lt;- which(speeds == max(speeds))
-message &lt;- sprintf(“The fastest is snail number %s”, snail_num)</p>
-<p>return(message)
-}</p>
-<p>fastest_snail(snail_speeds)</p>
-</div>
-<div id="functions-also-have-documentation-that-is-accessible-by-using-or" class="section level1">
-<h1>functions also have documentation that is accessible by using ? or</h1>
-</div>
-<div id="the-help-funciton-help" class="section level1">
-<h1>the help funciton help()</h1>
-<p>?mean
-help(mean)</p>
-</div>
-<div id="more-types-of-objects" class="section level1">
-<h1>More types of objects</h1>
-</div>
-<div id="we-saw-numbers-and-strings" class="section level1">
-<h1>We saw numbers and strings</h1>
-<p>print(a)
-print(b)</p>
-</div>
-<div id="booleans" class="section level1">
-<h1>Booleans</h1>
-<p>print(TRUE == TRUE)
-print(TRUE == FALSE)
-print(TRUE != FALSE)
-print(7 &lt; 8)</p>
-</div>
-<div id="vectors" class="section level1">
-<h1>Vectors</h1>
-</div>
-<div id="prediction-2" class="section level1">
-<h1>Prediction:</h1>
-<p>c &lt;- 1:5
-print(c)</p>
-</div>
-<div id="factors-for-categorical-variables" class="section level1">
-<h1>Factors (for categorical variables)</h1>
-</div>
-<div id="prediction-3" class="section level1">
-<h1>Prediction:</h1>
-<p>shell_snail1 &lt;- factor(“brown”, levels = c(“brown”, “orange”))
-print(shell_snail1)</p>
-</div>
-<div id="lists" class="section level1">
-<h1>Lists</h1>
-</div>
-<div id="prediction-4" class="section level1">
-<h1>Prediction:</h1>
-<p>d &lt;- list(1,2,3,4,5)
-print(d)</p>
-</div>
-<div id="prediction-5" class="section level1">
-<h1>Prediction:</h1>
-<p>e &lt;- list(b, “it came in”, a, “st place”)
-print(e)</p>
-</div>
-<div id="prediction-6" class="section level1">
-<h1>Prediction:</h1>
-<p>f &lt;- unlist(e)
-print(f)</p>
-</div>
-<div id="prediction-7" class="section level1">
-<h1>Prediction:</h1>
-<p>g &lt;- paste(f, collapse = " ")
-print(g)</p>
-</div>
-<div id="dataframes" class="section level1">
-<h1>Dataframes</h1>
-</div>
-<div id="very-useful-for-storing-multiple-pieces-of-data-together." class="section level1">
-<h1>Very useful for storing multiple pieces of data together.</h1>
-<p>print(snail_speeds)</p>
-</div>
-<div id="we-want-shell-colour-as-a-categorical-variable" class="section level1">
-<h1>We want shell colour as a categorical variable</h1>
-<p>shell_snail1 &lt;- “brown”
-shell_snail2 &lt;- “orange”
-shell_snail3 &lt;- “brown”</p>
-<p>snail_shells &lt;- c(shell_snail1, shell_snail2, shell_snail3)</p>
-</div>
-<div id="what-should-we-put-inside-the-as.factor-function-replace-the-string-below." class="section level1">
-<h1>What should we put inside the as.factor() function? Replace the string below.</h1>
-<p>snail_shells_factor &lt;- as.factor(“replace this”)
-print(snail_shells_factor)</p>
-<p>snail_data &lt;- data.frame(speed = snail_speeds, shell_colour = snail_shells_factor)
-print(snail_data)</p>
-</div>
-<div id="matrices-are-to-dataframes-as-lists-are-to-vectors.-similar-in-appearance-with" class="section level1">
-<h1>Matrices are to dataframes as lists are to vectors. Similar in appearance, with</h1>
-</div>
-<div id="some-usage-differences.-a-matrix-can-have-a-matrix-inside-it-in-the-way-that" class="section level1">
-<h1>some usage differences. A matrix can have a matrix inside it, in the way that</h1>
-</div>
-<div id="a-list-of-lists-is-possible." class="section level1">
-<h1>a list of lists is possible.</h1>
-</div>
-<div id="cbind-is-for-column-bind-rbind-is-for-row-bind" class="section level1">
-<h1>cbind is for column bind, rbind is for row bind</h1>
-<p>h &lt;- cbind(snail_speeds, snail_shells)
-print(h)</p>
-</div>
-<div id="accessing-data-indexing" class="section level1">
-<h1>accessing data (indexing)</h1>
-</div>
-<div id="data-can-be-accessed-out-of-datastructures-like-lists-vectors-dataframes-matricies" class="section level1">
-<h1>data can be accessed out of datastructures, like lists, vectors, dataframes, matricies</h1>
-</div>
-<div id="single-returns-an-object-of-the-same-type-double-may-returns-an-object-of-a-different-type." class="section level1">
-<h1>single [] returns an object of the same type, double [[]] may returns an object of a different type.</h1>
-<p>print(snail_data)
-print(snail_data[1])
-print(snail_data[[1]])</p>
-</div>
-<div id="we-can-keep-accessing-within-the-return-object" class="section level1">
-<h1>we can keep accessing within the return object</h1>
-<p>print(snail_data[[1]][2])</p>
-</div>
-<div id="we-can-also-view-columns-of-the-dataframe-by-name.-can-index-with-or" class="section level1">
-<h1>We can also view columns of the dataframe by name. Can index with $ or [[]]</h1>
-<p>print(snail_data$speed)
-print(snail_data[[“speed”]])</p>
-</div>
-<div id="this-takes-a-little-practice-to-get-used-to-smart-indexing-and-subsetting" class="section level1">
-<h1>This takes a little practice to get used to! Smart indexing and subsetting</h1>
-</div>
-<div id="yield-elegant-solutions." class="section level1">
-<h1>yield elegant solutions.</h1>
-</div>
-<div id="plotting-1" class="section level1">
-<h1>plotting</h1>
-</div>
-<div id="the-operator-lets-us-write-formulas.-this-is-great-for-plotting" class="section level1">
-<h1>the ~ operator lets us write formulas. This is great for plotting</h1>
-<p>group_averages &lt;- aggregate(speed ~ shell_colour, data = snail_data, FUN = mean)
-barplot(group_averages$speed)</p>
-</div>
-<div id="and-we-can-add-extra-parameters-for-nice-looking-plots" class="section level1">
-<h1>and we can add extra parameters for nice looking plots</h1>
-<p>barplot(group_averages<span class="math inline">\(speed, col = levels(group_averages\)</span>shell_colour),
-main = “Average snail speed”, ylab = “m/s”, names.arg = c(“brown shell”, “orange shell”))</p>
-</div>
-<div id="scripts-1" class="section level1">
-<h1>Scripts</h1>
-</div>
-<div id="up-until-now-this-.r-file-is-not-a-useful-script.-you-can-press-run-but-you" class="section level1">
-<h1>up until now, this .R file is not a useful script. You can press “run”, but you</h1>
-</div>
-<div id="wont-see-anything-happen.-this-isnt-because-nothings-happening-but-rather-the" class="section level1">
-<h1>won’t see anything happen. This isn’t because nothing’s happening, but rather the</h1>
-</div>
-<div id="results-are-not-being-output-to-somewhere-you-can-see.-to-fix-this-uncomment-the" class="section level1">
-<h1>results are not being output to somewhere you can see. To fix this, uncomment the</h1>
-</div>
-<div id="next-line-to-save-the-plot-to-an-image-file-and-try-running-it-again." class="section level1">
-<h1>next line to save the plot to an image file, and try running it again.</h1>
-<p>png()
-barplot(group_averages<span class="math inline">\(speed, col = levels(group_averages\)</span>shell_colour),
-main = “Average snail speed”, ylab = “m/s”, names.arg = c(“brown shell”, “orange shell”))
-dev.off()</p>
-</div>
-<div id="there-are-two-resources-to-know-for-getting-the-most-out-of-r---cran-and-bioconductor." class="section level1">
-<h1>there are two resources to know for getting the most out of R - CRAN and Bioconductor.</h1>
-</div>
-<div id="both-of-these-have-lots-of-different-packages-available-which-give-you-access" class="section level1">
-<h1>Both of these have lots of different packages available, which give you access</h1>
-</div>
-<div id="to-functionality-that-other-people-have-developed.-to-name-a-few" class="section level1">
-<h1>to functionality that other people have developed. To name a few…</h1>
-</div>
-<div id="ggplot2" class="section level1">
-<h1>ggplot2</h1>
-</div>
-<div id="dplyr" class="section level1">
-<h1>dplyr</h1>
-</div>
-<div id="bsgenome" class="section level1">
-<h1>BSgenome</h1>
-</div>
-<div id="biomart" class="section level1">
-<h1>biomaRt</h1>
 <div id="databases" class="section level2">
 <h2>2. Databases</h2>
 <div id="getting-data" class="section level3">
@@ -518,8 +377,8 @@ dev.off()</p>
 <h3>2.2.2 Data exploration</h3>
 </div>
 </div>
-<div id="drawing-data-driven-conclusions" class="section level2">
-<h2>3. Drawing data-driven conclusions</h2>
+<div id="data-driven-conclusions" class="section level2">
+<h2>3. Data-driven conclusions</h2>
 <div id="visualization" class="section level3">
 <h3>3.1 Visualization</h3>
 <div id="set-up" class="section level4">
@@ -533,6 +392,9 @@ if (!require(igraph)) {
 <pre><code>## Loading required package: igraph</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;igraph&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     as_data_frame, groups, union</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
 ## 
 ##     decompose, spectrum</code></pre>
@@ -605,7 +467,7 @@ plot( stringNetwork,
       vertex.label = NA,
       main = &quot;Network from STRING data&quot;
     )</code></pre>
-<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>With these settings, size of a node increases with degree, colour is dictated by
 community membership. We can see that there are several fairly well connected nodes
 with high degree of connectivity to other nodes. These nodes tend to be members of
@@ -618,11 +480,10 @@ large and well connected communities.</p>
 <h3>3.2 Statistical testing</h3>
 </div>
 </div>
-</div>
 
         </section>
         <footer>
-            <a class="permalink u-url" href="https://harrig12.github.io/lil-bioinf/post/workshop/"></a>
+            <a class="permalink u-url" href="/lil-bioinf/post/workshop/"></a>
             
         </footer>
     </article>
@@ -634,7 +495,7 @@ large and well connected communities.</p>
       <nav id="article-skip">
         <div class="next">
           
-          <a alt="Newer article" href="https://harrig12.github.io/lil-bioinf/about/">&larr; Newer</a>
+          <a alt="Newer article" href="/lil-bioinf/about/">&larr; Newer</a>
           
         </div>
         <div class="top">
@@ -642,7 +503,7 @@ large and well connected communities.</p>
         </div>
         <div class="prev">
           
-          <a alt="Older article" href="https://harrig12.github.io/lil-bioinf/dependencies/">Older &rarr;</a>
+          <a alt="Older article" href="/lil-bioinf/dependencies/">Older &rarr;</a>
           
         </div>
       </nav>
@@ -654,7 +515,7 @@ large and well connected communities.</p>
     
     
     <div class="icon-24x24">
-      <a class="glyph" alt="GitHub profile" href="https://github.com/harrig12/lil-bioinf"><img src=https://harrig12.github.io/lil-bioinf/icons/github.svg height="24px" width="24px"></a>
+      <a class="glyph" alt="GitHub profile" href="https://github.com/harrig12/lil-bioinf"><img src=/lil-bioinf/icons/github.svg height="24px" width="24px"></a>
     </div>
     
     
