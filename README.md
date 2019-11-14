@@ -49,6 +49,7 @@ The workshop runs in 1 hour, but can be modified to run in 2 upon request. For t
 ## 2.1 Request a workshop
 To request a workshop, please send an email, and CC both organizers.
 > **Gabriela Morgenshtern** [g.morgenshtern[at]mail.utoronto.ca]()
+>
 > **Cait Harrigan** [cait.harrigan[at]mail.utoronto.ca]()
 
 ## 2.2 [Webpage](https://harrig12.github.io/lil-bioinf/)
