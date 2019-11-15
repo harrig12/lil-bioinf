@@ -95,12 +95,6 @@ plot( stringNetwork,
       main = "Network from STRING data"
     )
 
-# With these settings, size of a node increases with degree, colour is dictated by 
-# community membership. We can see that there are several fairly well connected nodes 
-# with high degree of connectivity to other nodes. These nodes tend to be members of 
-# larger communities - this makes sense biologically, we could expect a protein in a 
-# large group of interacting proteins has many interactions. There are two distinctly 
-# large and well connected communities.
-
+# What biological hypotheses or conclusions can we draw?
 
 # [END]
