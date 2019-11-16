@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lil-bioinf</title>
-    <link>/lil-bioinf/</link>
+    <link>https://harrig12.github.io/lil-bioinf/</link>
     <description>Recent content on lil-bioinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2019, Gabriella Morgenshtern &amp; Cait Harrigan</copyright>
     
-        <atom:link href="/lil-bioinf/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://harrig12.github.io/lil-bioinf/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About the workshop</title>
-      <link>/lil-bioinf/about/</link>
+      <link>https://harrig12.github.io/lil-bioinf/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/about/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/about/</guid>
       <description>
 
 
@@ -23,7 +23,7 @@
 The workshop was designed by &lt;a href=&#34;https://orcid.org/0000-0003-4762-8797&#34;&gt;Gabriella Morgenshtern&lt;/a&gt; and &lt;a href=&#34;https://orcid.org/0000-0002-9243-9648&#34;&gt;Cait Harrigan&lt;/a&gt;, with reference to &lt;a href=&#34;http://steipe.biochemistry.utoronto.ca/abc/assets/ABC-units_map.svg&#34;&gt;learning units&lt;/a&gt; developed by &lt;a href=&#34;http://biochemistry.utoronto.ca/person/boris-steipe/&#34;&gt;Dr. Boris Steipe&lt;/a&gt;. It runs in about 1 hour, although we also deliver a version that includes basics of statistical modelling in R, which runs in 2 hours.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h4 id=&#34;if-you-are-attending-the-workshop-please-come-prepared.&#34;&gt;If you are attending the workshop: &lt;em&gt;please come prepared&lt;/em&gt;.&lt;/h4&gt;
-&lt;p&gt;We provide &lt;a href=&#34;/lil-bioinf/dependencies&#34;&gt;instructions&lt;/a&gt; for how to download and install the following required software ahead of time.&lt;/p&gt;
+&lt;p&gt;We provide &lt;a href=&#34;https://harrig12.github.io/lil-bioinf/dependencies&#34;&gt;instructions&lt;/a&gt; for how to download and install the following required software ahead of time.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://cran.utstat.utoronto.ca/&#34;&gt;R language&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://rstudio.com/products/rstudio/download/#download&#34;&gt;RStudio&lt;/a&gt;&lt;/li&gt;
@@ -37,17 +37,23 @@ The workshop was designed by &lt;a href=&#34;https://orcid.org/0000-0003-4762-87
 &lt;li&gt;Data visualization and data-driven biological reasoning&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We encourage the practice of &lt;strong&gt;pair programming&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Supporting scripts and other materials can be found on the workshop &lt;a href=&#34;https://github.com/harrig12/lil-bioinf&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Supporting scripts and other materials can be found on the workshop &lt;a href=&#34;https://github.com/harrig12/lil-bioinf&#34;&gt;github&lt;/a&gt; page.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h4 id=&#34;to-request-a-workshop&#34;&gt;To request a workshop&lt;/h4&gt;
+&lt;p&gt;please send an email, and CC both organizers.&lt;/p&gt;
+&lt;p&gt;Gabriela Morgenshtern: g.morgenshtern[at]mail.utoronto.ca&lt;/p&gt;
+&lt;p&gt;Cait Harrigan: cait.harrigan[at]mail.utoronto.ca&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>R for bioinformatics (and more!)</title>
-      <link>/lil-bioinf/post/workshop/</link>
+      <link>https://harrig12.github.io/lil-bioinf/post/workshop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/post/workshop/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/post/workshop/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -285,7 +291,7 @@ print(c(T, F, T))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# the ~ operator lets us write formulas. This is great for plotting
 group_averages &amp;lt;- aggregate(speed ~ shell_colour, data = snail_data, FUN = mean)
 barplot(group_averages$speed)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# and we can add extra parameters for nice looking plots
 barplot(group_averages$speed, col = levels(group_averages$shell_colour),
         main = &amp;quot;Average snail speed&amp;quot;, ylab = &amp;quot;m/s&amp;quot;, names.arg = c(&amp;quot;brown shell&amp;quot;, &amp;quot;orange shell&amp;quot;))
@@ -294,29 +300,29 @@ if (! require(ggplot2, quietly = TRUE)) {
   install.packages(&amp;quot;ggplot2&amp;quot;)
   library(ggplot2)
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;g &amp;lt;- ggplot(data = group_averages) 
 print(g)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# g with scatter plot (point geometry). Note: no assignment to g object
 g + geom_point(mapping = aes(x = shell_colour, y = speed, colour = shell_colour))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# ggplot objects have additive elements. Note: assignment to g object
 g &amp;lt;- g + geom_bar(mapping = aes(x = shell_colour, y = speed, fill = shell_colour),
              stat = &amp;quot;identity&amp;quot;)
 print(g)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# there are lots of themes and colour pallets to play with. ggplot is very flexible.
 g &amp;lt;- g + scale_fill_brewer(palette = &amp;quot;Set1&amp;quot;)
 print(g)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Adding an element that is already present will override previous settings.
 
 g &amp;lt;- g + scale_fill_manual(values = c(&amp;quot;#C4961A&amp;quot;, &amp;quot;#D16309&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Scale for &amp;#39;fill&amp;#39; is already present. Adding another scale for &amp;#39;fill&amp;#39;,
 ## which will replace the existing scale.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(g)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-10-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;scripts&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;1.8 Scripts&lt;/h3&gt;
@@ -448,7 +454,7 @@ plot( stringNetwork,
       vertex.label = NA,
       main = &amp;quot;Network from STRING data&amp;quot;
     )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://harrig12.github.io/lil-bioinf/lil-bioinf/post/workshop_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;With these settings, size of a node increases with degree, colour is dictated by
 community membership. We can see that there are several fairly well connected nodes
 with high degree of connectivity to other nodes. These nodes tend to be members of
@@ -466,10 +472,10 @@ large and well connected communities.&lt;/p&gt;
     
     <item>
       <title>Instructions for installing required software</title>
-      <link>/lil-bioinf/dependencies/</link>
+      <link>https://harrig12.github.io/lil-bioinf/dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/dependencies/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/dependencies/</guid>
       <description>
 
 
@@ -496,10 +502,10 @@ large and well connected communities.&lt;/p&gt;
     
     <item>
       <title>Adding Page Items</title>
-      <link>/lil-bioinf/adding-menu-items/</link>
+      <link>https://harrig12.github.io/lil-bioinf/adding-menu-items/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/adding-menu-items/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/adding-menu-items/</guid>
       <description>&lt;p&gt;Indigo supports adding a simple navigation-style menu items across the top of the site. To do so, simply add a &lt;code&gt;menu: &amp;quot;main&amp;quot;&lt;/code&gt; entry in your page&amp;rsquo;s front matter (TOML format shown).&lt;/p&gt;
 
 &lt;p&gt;If no date is included in the front matter, then the published date won&amp;rsquo;t be shown (as in this page).&lt;/p&gt;
@@ -508,10 +514,10 @@ large and well connected communities.&lt;/p&gt;
     
     <item>
       <title>Author Bios</title>
-      <link>/lil-bioinf/author-bios/</link>
+      <link>https://harrig12.github.io/lil-bioinf/author-bios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/lil-bioinf/author-bios/</guid>
+      <guid>https://harrig12.github.io/lil-bioinf/author-bios/</guid>
       <description>&lt;p&gt;The bottom of every page in the theme can optionally show a short biography of the site author, including a profile picture, email link, and location.&lt;/p&gt;
 
 &lt;h2 id=&#34;setting-up-the-author-bio&#34;&gt;Setting up the author bio&lt;/h2&gt;
