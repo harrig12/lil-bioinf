@@ -25,4 +25,14 @@ The workshop was designed by [Gabriella Morgenshtern](https://orcid.org/0000-000
 
 We encourage the practice of **pair programming** 
 
-Supporting scripts and other materials can be found on the workshop [github](https://github.com/harrig12/lil-bioinf)
+Supporting scripts and other materials can be found on the workshop [github](https://github.com/harrig12/lil-bioinf) page.
+
+
+> #### To request a workshop 
+>
+> please send an email, and CC both organizers.
+>
+> Gabriela Morgenshtern: g.morgenshtern[at]mail.utoronto.ca
+>
+> Cait Harrigan: cait.harrigan[at]mail.utoronto.ca
+
