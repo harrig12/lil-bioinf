@@ -20,7 +20,7 @@ devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8",
 
 
 ## 1. Introduction
-This page wis generated using Rmarkdown. It shows code in blocks, and the results of running that code below it.
+This page was generated using Rmarkdown. It shows code in blocks, and the results of running that code below it.
 
 Blocks that start with `##` are the output. 
 
