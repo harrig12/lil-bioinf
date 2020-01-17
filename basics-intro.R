@@ -6,10 +6,16 @@
 # Objects
 
 # Numbers
+
 (0.013 + 0.008 + 0.011) / 3
 
-# Variables
+# Character string
 
+"I like bioinformatics!"
+
+strsplit("I like bioinformatics!", split= "")
+
+# Variables
 num_snails <- 3
 
 speed_snail1 <- 0.013
@@ -18,13 +24,8 @@ speed_snail3 <- 0.011
 
 (speed_snail1 + speed_snail2 + speed_snail3) / num_snails
 
-
-# Data Structures
 # After each variable assignment, write down what you think you'll see,
 # then print the true value
-
-# Variables
-# Numbers
 
 # Prediction: print(a) will show 1
 a <- 1
@@ -131,7 +132,9 @@ print(h)
 
 # accessing data (subsetting)
 # data can be accessed out of datastructures, like lists, vectors, dataframes, matricies
-# single [] returns an object of the same type, double [[]] may returns an object of a different type.
+# single [] returns a filtered object of the same type
+# double [[]] may return an object of a different type (often a simpler one).
+# [[]] always returns a single item
 print(snail_data)
 print(snail_data[1])
 print(snail_data[[1]])
@@ -160,8 +163,8 @@ if (! require(dplyr, quietly = TRUE)) {
 
 ?filter
 
-# We can subset with a boolean vector.
-print(c(T, F, T))
+# We can subset with a boolean vector. Use TRUE for the rows you want to see!
+print(c(TRUE, FALSE, TRUE))
 print( snail_data[c(T, F, T) ,] )
 
 print(snail_data$shell_colour == "brown")
@@ -206,20 +209,20 @@ print(g)
 
 # Scripts
 
-# up until now, this .R file is not a useful script. You can press "run", but you
+# up until now, this .R file is not a useful script. You can press "source", but you
 # won't see anything happen. This isn't because nothing's happening, but rather the 
-# results are not being output to somewhere you can see. To fix this, uncomment the 
-# next line to save the plot to an image file, and try running it again.
+# results are not being output to somewhere you can see (called side-effects). 
+# To fix this, uncomment the next line to save the plot to an image file, and try sourcing it again.
 
-#png()
-#barplot(group_averages$speed, col = levels(group_averages$shell_colour),
+#png(filename = "myBarplot.png")
+#barplot(group_averages$speed, col = c("#C4961A", "#D16309"),
 #        main = "Average snail speed", ylab = "m/s", names.arg = c("brown shell", "orange shell"))
 #dev.off()
 
 # similarly, with ggplot...
 
 #g <- g + ggtitle("Avgerage snail speed by shell colour")
-#ggsave(plot = g, filename = "~/Downloads/ggImage.png")
+#ggsave(plot = g, filename = "ggImage.png")
 
 # there are two resources to know for getting the most out of R - CRAN and Bioconductor.
 # Both of these have lots of different packages available, which give you access
