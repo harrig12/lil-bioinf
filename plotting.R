@@ -89,7 +89,7 @@ plot( stringNetwork,
       rescale = F,
       xlim = c(min(networkLayout[,1]) * 0.99, max(networkLayout[,1]) * 1.01),
       ylim = c(min(networkLayout[,2]) * 0.99, max(networkLayout[,2]) * 1.01),
-      vertex.color=rainbow(max(membership(comms)+1))[membership(comms)+1],
+      vertex.color=rainbow(max(membership(communities)+1))[membership(communities)+1],
       vertex.size = 700 + (90 * degree(stringNetwork)),
       vertex.label = NA,
       main = "Network from STRING data"
