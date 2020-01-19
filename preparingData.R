@@ -12,17 +12,18 @@
 # Dataset Access:
 #      STRING data source:
 #        Download page: https://string-db.org/cgi/download.pl?species_text=Saccharomyces+cerevisiae
-#        Data: (20.8 mb) https://string-db.org/download/protein.links.full.v11/4932.protein.links.full.v11.txt.gz
+#        Data: (20.8 mb) https://string-db.org/download/protein.links.full.v11.0/4932.protein.links.full.v11.0.txt.gz
 #
 #      GOSlim data source:
-#        Info page: http://www.geneontology.org/page/go-slim-and-subset-guide
+#        Info page: http://geneontology.org/docs/go-subset-guide/
 #        Data: (3 mb) https://downloads.yeastgenome.org/curation/literature/go_slim_mapping.tab
 #
 
 if (! require(readr, quietly = TRUE)) {
   install.packages("readr")
-  library(readr)
 }
+
+library(readr)
 
 # =============================================================================
 # 1. Preparing STRING Data
@@ -32,10 +33,9 @@ if (! require(readr, quietly = TRUE)) {
 # To read STRING data, it first needs to be downloaded from database 
 # and put into our /data directory. We've already done that for you
 # EXPLAIN RDS and saving space and loading RDS objects
-readr::read_delim("4932.protein.links.full.v11.0.txt", delim = " ")
-saveRDS(STR, "./data/4932.protein.links.full.v11.0")
 
-STR <- readRDS("./data/4932.protein.links.full.v11.0")
+onlineData = gzcon(url("https://string-db.org/download/protein.links.full.v11.0/4932.protein.links.full.v11.0.txt.gz"))
+STR <- read_delim(onlineData, delim = " ")
 
 # 1. How to subset our data:
 
@@ -67,7 +67,9 @@ myIntxGenes <- unique(c(STR$protein1, STR$protein2))  # yeast systematic gene
 # Read GOSlim data  (needs to be downloaded from database, see URL in Notes)
 # tsv is Tab Separated Values, which is a lot like a CSV, just delineated with 
 # a different (tab) character
-Gsl <- read.csv("./data/go_slim_mapping.tab",
+onlineData = url("https://downloads.yeastgenome.org/curation/literature/go_slim_mapping.tab")
+
+Gsl <- read.csv(onlineData,
                 col.names = c("ID",
                               "name",
                               "SGDId",
