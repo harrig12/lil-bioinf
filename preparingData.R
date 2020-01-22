@@ -1,6 +1,6 @@
 # preparingData.R
 # Author: Gabriela Morgenshtern
-# Date: November 2019
+# Date: Jan 2020
 # Version 1.0
 #
 # This script works through downloading, processing, and integrating information from the

@@ -19,7 +19,6 @@ if (!require(igraph)) {
 # load data from STRING database, prepared in getData.R
 load("~/Downloads/scCCnet.rdata")
 preparedData <- scCCnet
-#load("./STRING.RData")
 
 # =============================================================================
 # 2. Plot network

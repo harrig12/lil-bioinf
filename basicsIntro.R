@@ -1,6 +1,6 @@
 # basics-intro.R
 # Author: Cait Harrigan
-# Date: November 2019
+# Date: Jan 2020
 # Version 1.0
 
 # Objects
